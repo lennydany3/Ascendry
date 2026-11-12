@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-hover: #171717;
+  --color-fg: #fafafa;
+  --color-fg-muted: #a1a1a1;
+  --color-fg-subtle: #7c7c7c;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.16);
+  --color-invert-bg: #fafafa;
+  --color-invert-fg: #0a0a0a;
+  --color-invert-muted: #525252;
+  --color-error: #f87171;
+  --color-success: #4ade80;
+
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-bg);
+  color: var(--color-fg-muted);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg-muted);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-fg);
+}
+
+::selection {
+  background: var(--color-fg);
+  color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-fg);
+  outline-offset: 3px;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes word-up {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes mark-l {
+  from { transform: translate(-18px, 22px) rotate(-8deg); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes mark-c {
+  from { transform: translateX(-44px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes mark-r {
+  0% { transform: translateY(72px); opacity: 0; }
+  72% { transform: translateY(-1.6px); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes menu-link {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.anim-word {
+  display: inline-block;
+  transform: translateY(110%);
+  animation: word-up 850ms var(--ease-out) both;
+  animation-delay: calc(700ms + var(--i, 0) * 60ms);
+}
+.anim-rev {
+  opacity: 0;
+  animation: reveal-in 700ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+.anim-fade {
+  opacity: 0;
+  animation: fade-in 700ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+.anim-menu {
+  opacity: 0;
+  animation: menu-link 600ms var(--ease-out) both;
+  animation-delay: calc(80ms + var(--i, 0) * 60ms);
+}
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+.mark-piece {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.mark-piece[data-p="l"] { animation: mark-l 1000ms 100ms var(--ease-out) both; }
+.mark-piece[data-p="c"] { animation: mark-c 900ms 350ms var(--ease-out) both; }
+.mark-piece[data-p="r"] { animation: mark-r 1100ms 600ms var(--ease-out) both; }
+
+/* Scroll reveal (toggled by <Reveal>) */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(4px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out), filter 700ms var(--ease-out);
+  transition-delay: var(--d, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .anim-word { transform: none; animation: fade-in 400ms both; animation-delay: calc(100ms + var(--i, 0) * 60ms); }
+  .anim-rev { animation: fade-in 400ms both; animation-delay: calc(var(--d, 0ms) * 0.2); }
+  .anim-fade { animation-duration: 400ms; }
+  .anim-menu { animation: fade-in 400ms both; }
+  .marquee-track { animation: none; }
+  .mark-piece { animation: none !important; }
+  .reveal { transform: none; filter: none; transition: opacity 400ms; }
 }
