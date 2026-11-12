@@ -2,6 +2,15 @@
 
 import { useEffect, useRef } from "react";
 
+// Start fetching the Three.js chunk as soon as this module evaluates (before
+// hydration) so the 3D mark is ready as early as possible.
+const mark3dModule: Promise<typeof import("./mark3d")> | null =
+  typeof window !== "undefined" &&
+  window.innerWidth >= 768 &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ? import("./mark3d")
+    : null;
+
 /**
  * The Ascent mark. Server-rendered 2D SVG assembles with CSS (works before JS,
  * on mobile, low-power devices and reduced motion). On capable desktops a
@@ -26,7 +35,10 @@ export function HeroMark() {
     let inView = true;
     let disposed = false;
     let dispose3D: (() => void) | null = null;
-    const t0 = performance.now();
+    const cleanups: Array<() => void> = [];
+    const show2D = () => {
+      svgWrap.dataset.on = "true";
+    };
 
     const onScroll = () => {
       const h = section?.offsetHeight || window.innerHeight;
@@ -66,23 +78,33 @@ export function HeroMark() {
       (navigator.hardwareConcurrency || 8) > 4 &&
       !reduced;
 
-    if (use3D) {
-      import("./mark3d")
+    if (use3D && mark3dModule) {
+      // 2D fallback only if WebGL fails or is unusually slow.
+      const slow = window.setTimeout(show2D, 4000);
+      mark3dModule
         .then(({ createMark3D }) => {
           if (disposed) return;
           dispose3D = createMark3D(host, state, {
             reduced,
-            t0,
+            t0: performance.now(),
             onFirstFrame: () => {
+              window.clearTimeout(slow);
+              if (svgWrap.dataset.on === "true") svgWrap.dataset.on = "false";
               host.style.opacity = "1";
-              svgWrap.style.transition = "opacity 600ms cubic-bezier(0.22,1,0.36,1)";
-              svgWrap.style.opacity = "0";
             },
           });
+          if (!dispose3D) {
+            window.clearTimeout(slow);
+            show2D();
+          }
         })
         .catch(() => {
-          /* keep the 2D fallback */
+          window.clearTimeout(slow);
+          show2D();
         });
+      cleanups.push(() => window.clearTimeout(slow));
+    } else {
+      show2D();
     }
 
     return () => {
@@ -91,6 +113,7 @@ export function HeroMark() {
       window.removeEventListener("pointermove", onPointer);
       document.removeEventListener("visibilitychange", onVis);
       io?.disconnect();
+      cleanups.forEach((c) => c());
       dispose3D?.();
     };
   }, []);
@@ -103,7 +126,7 @@ export function HeroMark() {
     >
       <div
         ref={svgWrapRef}
-        className="absolute inset-0 flex items-center justify-center"
+        className="mark-2d absolute inset-0 flex items-center justify-center"
       >
         <svg
           ref={svgRef}

@@ -123,9 +123,11 @@ h3 {
   transform-box: fill-box;
   transform-origin: center;
 }
-.mark-piece[data-p="l"] { animation: mark-l 1000ms 100ms var(--ease-out) both; }
-.mark-piece[data-p="c"] { animation: mark-c 900ms 350ms var(--ease-out) both; }
-.mark-piece[data-p="r"] { animation: mark-r 1100ms 600ms var(--ease-out) both; }
+.mark-2d { opacity: 0; }
+.mark-2d[data-on="true"] { opacity: 1; }
+.mark-2d[data-on="true"] .mark-piece[data-p="l"] { animation: mark-l 1000ms 100ms var(--ease-out) both; }
+.mark-2d[data-on="true"] .mark-piece[data-p="c"] { animation: mark-c 900ms 350ms var(--ease-out) both; }
+.mark-2d[data-on="true"] .mark-piece[data-p="r"] { animation: mark-r 1100ms 600ms var(--ease-out) both; }
 
 /* Scroll reveal (toggled by <Reveal>) */
 .reveal {
