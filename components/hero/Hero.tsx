@@ -5,14 +5,10 @@ import { HeroMark } from "./HeroMark";
 import { Marquee } from "./Marquee";
 
 const words = [
-  { w: "Websites" },
-  { w: "that" },
-  { w: "work", italic: true },
-  { w: "as" },
-  { w: "hard" },
-  { w: "as" },
-  { w: "you" },
-  { w: "do." },
+  { w: "Somewhere," },
+  { w: "something" },
+  { w: "got" },
+  { w: "easier.", italic: true },
 ];
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
@@ -34,22 +30,16 @@ export function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-[1296px] flex-1 content-center items-center gap-10 px-[clamp(20px,4vw,48px)] pt-28 pb-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-8 lg:pt-32 lg:pb-16">
         <div className="min-w-0">
-          <div className="anim-rev mb-6 sm:mb-8" style={d(600)}>
-            <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[0.03] py-1.5 pr-3.5 pl-3 font-mono text-[11px] leading-none tracking-[0.14em] text-fg-muted uppercase">
-              <span className="relative flex size-1.5">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-success opacity-60 motion-reduce:hidden" />
-                <span className="relative inline-flex size-1.5 rounded-full bg-success" />
-              </span>
-              Ascendry Studio · Client work
-            </p>
-          </div>
-
           <h1 className="font-display text-[clamp(44px,13vw,64px)] leading-[0.96] font-normal tracking-[-0.02em] sm:text-[clamp(64px,9vw,88px)] lg:text-[clamp(60px,6.2vw,96px)]">
             {words.map(({ w, italic }, i) => (
               <span
                 key={i}
                 className={`inline-block overflow-hidden align-top pb-[0.12em] -mb-[0.12em] ${
-                  i === words.length - 1 ? "" : italic ? "mr-[0.2em] pr-[0.04em]" : "mr-[0.24em]"
+                  i === words.length - 1
+                    ? "pr-[0.08em]"
+                    : italic
+                      ? "mr-[0.2em] pr-[0.04em]"
+                      : "mr-[0.24em]"
                 }`}
               >
                 <span
@@ -66,8 +56,7 @@ export function Hero() {
             className="anim-rev mt-6 max-w-[44ch] text-[17px] leading-[1.6] text-fg-muted [text-wrap:pretty] sm:mt-8 sm:text-[19px]"
             style={d(1250)}
           >
-            Premium websites, booking systems and automation for cafes, gyms,
-            salons, restaurants and growing businesses.
+            We probably built it.
           </p>
 
           <div
@@ -75,10 +64,10 @@ export function Hero() {
             style={d(1350)}
           >
             <MagneticButton href="#work" className="!h-12 justify-center sm:!h-11">
-              View our work
+              See what we built
             </MagneticButton>
             <Button href="#contact" className="!h-12 justify-center sm:!h-11">
-              Get a quote
+              Get in touch
             </Button>
           </div>
 
@@ -86,7 +75,7 @@ export function Hero() {
             className="anim-rev mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-fg-subtle sm:mt-10"
             style={d(1450)}
           >
-            {["Registered business", "Fast delivery", "Built with Next.js"].map(
+            {["Built fast", "Built right", "Built once"].map(
               (t) => (
                 <li key={t} className="flex items-center gap-2">
                   <svg

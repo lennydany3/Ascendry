@@ -1,15 +1,16 @@
 import type { CSSProperties } from "react";
 
 const niches = [
-  "Cafes",
-  "Gaming cafes",
-  "Gyms",
-  "Fashion",
-  "Stays",
-  "Restaurants",
-  "Salons",
-  "Coaching",
-  "Bakeries",
+  "01 Booking engines",
+  "02 Payment flows",
+  "03 WhatsApp automation",
+  "04 Admin dashboards",
+  "05 Customer portals",
+  "06 Inventory systems",
+  "07 Loyalty programs",
+  "08 Custom APIs",
+  "09 AI workflows",
+  "10 Analytics",
 ];
 
 function Row({ hidden = false }: { hidden?: boolean }) {
@@ -33,7 +34,7 @@ export function Marquee() {
     >
       <div
         role="group"
-        aria-label="Industries we build for"
+        aria-label="What we build"
         className="marquee-track flex w-max font-mono text-xs leading-[1.4] tracking-[0.16em] text-fg-subtle uppercase"
       >
         <Row />
