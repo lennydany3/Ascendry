@@ -61,7 +61,7 @@ export function createMark3D(
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
   renderer.setClearColor(0x000000, 0);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.05;
+  renderer.toneMappingExposure = 1.35;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.localClippingEnabled = true;
   const cv = renderer.domElement;
@@ -94,13 +94,13 @@ export function createMark3D(
     env.add(m);
     D.push(m.geometry, m.material as THREE.Material);
   };
-  strip(12, 0.8, -2, 6, 2, 5);
-  strip(0.6, 10, -6, 0, 3, 3);
+  strip(12, 1.4, -2, 6, 2, 7);
+  strip(1.2, 10, -6, 0, 3, 4);
   strip(0.8, 10, 6, 1, -5, 6);
-  strip(12, 0.32, 0, 1.6, 7, 2.4);
+  strip(12, 0.6, 0, 1.6, 7, 3.2);
   strip(12, 0.18, 0, -1.3, 7, 1.1);
   strip(0.22, 10, 2.2, 0, 7, 1.3);
-  strip(16, 7, 0, 0, -9, 0.06);
+  strip(16, 7, 0, 0, -9, 0.15);
   const pm = new THREE.PMREMGenerator(renderer);
   const envTex = pm.fromScene(env, 0.02).texture;
   pm.dispose();
@@ -128,10 +128,10 @@ export function createMark3D(
   const clipUp = new THREE.Plane(new THREE.Vector3(0, 1, 0), -floorY);
   const clipDown = new THREE.Plane(new THREE.Vector3(0, -1, 0), floorY);
   const base = {
-    color: 0xd9d9d9,
+    color: 0xf2f2f2,
     metalness: 1,
-    roughness: 0.2,
-    clearcoat: 0.6,
+    roughness: 0.13,
+    clearcoat: 0.8,
     clearcoatRoughness: 0.15,
     transparent: true,
     opacity: 0,
@@ -194,10 +194,10 @@ export function createMark3D(
         sh.fragmentShader.replace(
           "#include <dithering_fragment>",
           "#include <dithering_fragment>\ngl_FragColor.a *= smoothstep(" +
-            (floorY - 1.1).toFixed(3) +
+            (floorY - 1.5).toFixed(3) +
             ", " +
             floorY.toFixed(3) +
-            ", vWY) * 0.12;",
+            ", vWY) * 0.13;",
         );
     };
     const mesh = new THREE.Mesh(g, m);
@@ -249,9 +249,9 @@ export function createMark3D(
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     const t = Math.tan(THREE.MathUtils.degToRad(15));
-    const d = Math.max(3.7 / 2 / t, 3.4 / 2 / (t * camera.aspect));
-    camera.position.set(0, 0.25, d);
-    camera.lookAt(0, -0.05, 0);
+    const d = Math.max(4.9 / 2 / t, 3.9 / 2 / (t * camera.aspect));
+    camera.position.set(0, -0.35, d);
+    camera.lookAt(0, -0.45, 0);
     camera.updateProjectionMatrix();
   };
   fit();

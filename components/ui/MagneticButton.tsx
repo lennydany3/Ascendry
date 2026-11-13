@@ -8,9 +8,11 @@ import { buttonBase } from "./Button";
 export function MagneticButton({
   href,
   children,
+  className = "",
 }: {
   href: string;
   children: ReactNode;
+  className?: string;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
   const arrow = useRef<HTMLSpanElement>(null);
@@ -22,7 +24,7 @@ export function MagneticButton({
     <Link
       ref={ref}
       href={href}
-      className={`${buttonBase} bg-fg text-bg hover:bg-[#e5e5e5]`}
+      className={`${buttonBase} bg-fg text-bg hover:bg-[#e5e5e5] ${className}`}
       onMouseMove={(e) => {
         const el = ref.current;
         if (!el || reduced()) return;

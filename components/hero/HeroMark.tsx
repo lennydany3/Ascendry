@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 
 // Start fetching the Three.js chunk as soon as this module evaluates (before
 // hydration) so the 3D mark is ready as early as possible.
@@ -122,8 +122,14 @@ export function HeroMark() {
     <div
       ref={wrapRef}
       aria-hidden="true"
-      className="relative h-[clamp(260px,40vw,580px)] w-full md:flex-[1_1_420px]"
+      className="anim-fade relative aspect-[5/4] w-full overflow-hidden rounded-2xl border border-line bg-[radial-gradient(ellipse_70%_60%_at_50%_42%,rgba(255,255,255,0.07),transparent_70%)] sm:aspect-[16/11] lg:aspect-auto lg:h-[clamp(480px,68vh,640px)]"
+      style={{ "--d": "500ms" } as CSSProperties}
     >
+      <div className="absolute inset-x-0 top-0 flex items-center justify-between px-4 py-3 font-mono text-[10px] tracking-[0.16em] text-fg-subtle uppercase">
+        <span>Fig. 01</span>
+        <span>The Ascent mark</span>
+      </div>
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/[0.035] to-transparent" />
       <div
         ref={svgWrapRef}
         className="mark-2d absolute inset-0 flex items-center justify-center"
@@ -131,9 +137,16 @@ export function HeroMark() {
         <svg
           ref={svgRef}
           viewBox="8 0 112 116"
-          className="aspect-[112/116] h-[78%] max-w-[82%] overflow-visible text-fg will-change-[transform,opacity]"
+          className="aspect-[112/116] h-[70%] max-w-[82%] overflow-visible text-fg will-change-[transform,opacity]"
         >
-          <g fill="currentColor">
+          <defs>
+            <linearGradient id="mark-chrome" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#ffffff" />
+              <stop offset="0.5" stopColor="#bdbdbd" />
+              <stop offset="1" stopColor="#6b6b6b" />
+            </linearGradient>
+          </defs>
+          <g fill="url(#mark-chrome)">
             <path className="mark-piece" data-p="l" d="M8 116 41 18h17L34 116z" />
             <path className="mark-piece" data-p="r" d="M73 0h17l30 116H94z" />
             <path className="mark-piece" data-p="c" d="M25 82h40l4 14H21z" />

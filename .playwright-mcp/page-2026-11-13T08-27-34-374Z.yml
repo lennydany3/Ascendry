@@ -1,0 +1,229 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Ascendry home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e13]: ASCENDRY
+      - navigation "Primary" [ref=e14]:
+        - link "Work" [ref=e15] [cursor=pointer]:
+          - /url: "#work"
+        - link "Services" [ref=e16] [cursor=pointer]:
+          - /url: "#services"
+        - link "About" [ref=e17] [cursor=pointer]:
+          - /url: "#about"
+      - link "Get a quote" [ref=e19] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=e22]:
+    - region "Introduction" [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - paragraph [ref=e27]: Web studio · Chennai → Worldwide
+          - heading "Websites that work as hard as you do." [level=1] [ref=e31]:
+            - generic [ref=e32]: Websites
+            - generic [ref=e34]: that
+            - generic [ref=e36]: work
+            - generic [ref=e38]: as
+            - generic [ref=e40]: hard
+            - generic [ref=e42]: as
+            - generic [ref=e44]: you
+            - generic [ref=e46]: do.
+          - paragraph [ref=e48]: Premium websites, booking systems and automation for cafes, gyms, salons, restaurants and growing businesses.
+          - generic [ref=e49]:
+            - link "View our work" [ref=e50] [cursor=pointer]:
+              - /url: "#work"
+              - text: View our work
+              - generic [aria-hidden] [ref=e51]: →
+            - link "Get a quote" [ref=e52] [cursor=pointer]:
+              - /url: "#contact"
+          - list [ref=e53]:
+            - listitem [ref=e54]: Registered business
+            - listitem [ref=e57]: Fast delivery
+            - listitem [ref=e60]: Built with Next.js
+        - generic [ref=e64]:
+          - generic [ref=e65]: Fig. 01
+          - generic [ref=e66]: The Ascent mark
+      - group "Industries we build for" [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: Cafes
+            - generic [aria-hidden] [ref=e80]: ·
+          - generic [ref=e81]:
+            - generic [ref=e82]: Gaming cafes
+            - generic [aria-hidden] [ref=e83]: ·
+          - generic [ref=e84]:
+            - generic [ref=e85]: Gyms
+            - generic [aria-hidden] [ref=e86]: ·
+          - generic [ref=e87]:
+            - generic [ref=e88]: Fashion
+            - generic [aria-hidden] [ref=e89]: ·
+          - generic [ref=e90]:
+            - generic [ref=e91]: Stays
+            - generic [aria-hidden] [ref=e92]: ·
+          - generic [ref=e93]:
+            - generic [ref=e94]: Restaurants
+            - generic [aria-hidden] [ref=e95]: ·
+          - generic [ref=e96]:
+            - generic [ref=e97]: Salons
+            - generic [aria-hidden] [ref=e98]: ·
+          - generic [ref=e99]:
+            - generic [ref=e100]: Coaching
+            - generic [aria-hidden] [ref=e101]: ·
+          - generic [ref=e102]:
+            - generic [ref=e103]: Bakeries
+            - generic [aria-hidden] [ref=e104]: ·
+        - generic [aria-hidden] [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]: Cafes
+            - generic [aria-hidden] [ref=e108]: ·
+          - generic [ref=e109]:
+            - generic [ref=e110]: Gaming cafes
+            - generic [aria-hidden] [ref=e111]: ·
+          - generic [ref=e112]:
+            - generic [ref=e113]: Gyms
+            - generic [aria-hidden] [ref=e114]: ·
+          - generic [ref=e115]:
+            - generic [ref=e116]: Fashion
+            - generic [aria-hidden] [ref=e117]: ·
+          - generic [ref=e118]:
+            - generic [ref=e119]: Stays
+            - generic [aria-hidden] [ref=e120]: ·
+          - generic [ref=e121]:
+            - generic [ref=e122]: Restaurants
+            - generic [aria-hidden] [ref=e123]: ·
+          - generic [ref=e124]:
+            - generic [ref=e125]: Salons
+            - generic [aria-hidden] [ref=e126]: ·
+          - generic [ref=e127]:
+            - generic [ref=e128]: Coaching
+            - generic [aria-hidden] [ref=e129]: ·
+          - generic [ref=e130]:
+            - generic [ref=e131]: Bakeries
+            - generic [aria-hidden] [ref=e132]: ·
+    - generic [ref=e134]:
+      - generic [ref=e136]:
+        - paragraph [ref=e137]: — 01 / Selected work
+        - heading [level=2] [ref=e138]:
+          - text: Built for
+          - emphasis [ref=e139]: real
+          - text: businesses.
+        - paragraph [ref=e140]: Nine demo sites across nine industries. Each one is a working starting point for your own.
+      - generic [ref=e141]:
+        - article [ref=e143]:
+          - paragraph [ref=e154]: Coffee cafe
+          - heading "Bean and Brew" [level=3] [ref=e155]
+          - paragraph [ref=e156]: Menu, orders and table bookings for a neighbourhood cafe.
+        - article [ref=e158]:
+          - paragraph [ref=e169]: Gaming cafe
+          - heading "Respawn Arena" [level=3] [ref=e170]
+          - paragraph [ref=e171]: Seat booking and tournament sign-ups.
+        - article [ref=e173]:
+          - paragraph [ref=e184]: Gym
+          - heading "IronCore" [level=3] [ref=e185]
+          - paragraph [ref=e186]: Memberships, class schedules and trial passes.
+        - article [ref=e188]:
+          - paragraph [ref=e199]: Clothing
+          - heading "Threadline" [level=3] [ref=e200]
+          - paragraph [ref=e201]: A clean storefront for a fashion label.
+        - article [ref=e203]:
+          - paragraph [ref=e214]: Stays
+          - heading "Coastline Stays" [level=3] [ref=e215]
+          - paragraph [ref=e216]: Rooms, rates and direct booking enquiries.
+        - article [ref=e218]:
+          - paragraph [ref=e229]: Restaurant
+          - heading "Saffron Table" [level=3] [ref=e230]
+          - paragraph [ref=e231]: Menus, reservations and WhatsApp ordering.
+        - article [ref=e233]:
+          - paragraph [ref=e244]: Salon & spa
+          - heading "Luxe Studio" [level=3] [ref=e245]
+          - paragraph [ref=e246]: Services, stylists and online appointments.
+        - article [ref=e248]:
+          - paragraph [ref=e259]: Coaching
+          - heading "Apex Academy" [level=3] [ref=e260]
+          - paragraph [ref=e261]: Courses, batches and enrolment forms.
+        - article [ref=e263]:
+          - paragraph [ref=e274]: Bakery
+          - heading "Crumb and Co" [level=3] [ref=e275]
+          - paragraph [ref=e276]: Cake catalogue with custom order requests.
+    - generic [ref=e278]:
+      - generic [ref=e280]:
+        - paragraph [ref=e281]: — 02 / Services
+        - heading [level=2] [ref=e282]:
+          - text: Get bookings while you
+          - emphasis [ref=e283]: sleep
+          - text: .
+        - paragraph [ref=e284]: Everything a growing business needs online, built and handled by one small team.
+      - generic [ref=e285]:
+        - generic [ref=e287]:
+          - heading "Websites" [level=3] [ref=e291]
+          - paragraph [ref=e292]: Fast, sharp sites that look the part and turn visitors into enquiries.
+        - generic [ref=e294]:
+          - heading "Booking systems" [level=3] [ref=e299]
+          - paragraph [ref=e300]: Let customers book tables, seats, classes or appointments any time of day.
+        - generic [ref=e302]:
+          - heading "Automation" [level=3] [ref=e306]
+          - paragraph [ref=e307]: Confirmations, reminders and follow-ups that run without you lifting a finger.
+    - generic [ref=e309]:
+      - generic [ref=e311]:
+        - paragraph [ref=e312]: — 03 / About
+        - heading [level=2] [ref=e313]:
+          - text: A small studio that
+          - emphasis [ref=e314]: cares
+          - text: .
+      - generic [ref=e316]:
+        - paragraph [ref=e317]: Ascendry is a web studio based in Chennai, working with small and growing businesses in India and the US. We keep the team small so every project gets real attention.
+        - paragraph [ref=e318]: We build clear, fast websites and the booking and automation tools behind them, so your business keeps moving while you focus on your customers.
+    - generic [ref=e321]:
+      - generic [ref=e322]:
+        - paragraph [ref=e323]: — 04 / Contact
+        - heading [level=2] [ref=e324]:
+          - text: Ready to
+          - emphasis [ref=e325]: grow
+          - text: "?"
+        - paragraph [ref=e326]: Tell us about your business and get a clear quote, usually within a day.
+      - generic [ref=e327]:
+        - link "Chat on WhatsApp" [ref=e328] [cursor=pointer]:
+          - /url: https://wa.me/91XXXXXXXXXX
+        - link "hello@ascendry.in" [ref=e329] [cursor=pointer]:
+          - /url: mailto:hello@ascendry.in
+  - contentinfo [ref=e330]:
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - link "Ascendry home" [ref=e334] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e340]: ASCENDRY
+          - paragraph [ref=e341]: Websites, booking systems and automation for small and growing businesses in India and the US.
+        - generic [ref=e342]:
+          - paragraph [ref=e343]: Pages
+          - link "Work" [ref=e344] [cursor=pointer]:
+            - /url: "#work"
+          - link "Services" [ref=e345] [cursor=pointer]:
+            - /url: "#services"
+          - link "About" [ref=e346] [cursor=pointer]:
+            - /url: "#about"
+          - link "Contact" [ref=e347] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=e348]:
+          - paragraph [ref=e349]: Legal
+          - link "Privacy policy" [ref=e350] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms & conditions" [ref=e351] [cursor=pointer]:
+            - /url: "#"
+          - link "Refund & cancellation" [ref=e352] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e353]:
+          - paragraph [ref=e354]: Contact
+          - link "hello@ascendry.in" [ref=e355] [cursor=pointer]:
+            - /url: mailto:hello@ascendry.in
+          - link "WhatsApp +91 XXXXXXXXXX" [ref=e356] [cursor=pointer]:
+            - /url: https://wa.me/91XXXXXXXXXX
+          - generic [ref=e357]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+      - generic [ref=e358]:
+        - generic [ref=e359]: © 2026 Ascendry · Chennai, India
+        - generic [ref=e360]: Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
+    - generic [aria-hidden] [ref=e361]: ASCENDRY
+  - link "Chat on WhatsApp" [ref=e362] [cursor=pointer]:
+    - /url: https://wa.me/91XXXXXXXXXX
+  - button "Open Next.js Dev Tools" [ref=e370] [cursor=pointer]
