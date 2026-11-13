@@ -21,7 +21,7 @@ export function ProjectDetail({ c, headingId }: { c: Client; headingId?: string 
         >
           {c.name}
         </h2>
-        <p className="mt-3 text-sm text-fg-muted">For {c.client}</p>
+        {c.client ? <p className="mt-3 text-sm text-fg-muted">For {c.client}</p> : null}
         <p className="mt-5 text-[15px] leading-[1.7] text-fg-muted">{c.summary}</p>
 
         <ul className="mt-6 divide-y divide-line border-y border-line">
@@ -32,11 +32,12 @@ export function ProjectDetail({ c, headingId }: { c: Client; headingId?: string 
           ))}
         </ul>
 
+        <div className="mt-6 flex flex-wrap items-center gap-3">
         <a
           href={c.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-6 inline-flex h-11 items-center gap-2 rounded-lg bg-fg px-5 text-sm font-medium text-bg transition-colors hover:bg-[#e5e5e5]"
+          className="group inline-flex h-11 items-center gap-2 rounded-lg bg-fg px-5 text-sm font-medium text-bg transition-colors hover:bg-[#e5e5e5]"
         >
           Visit live site
           <ArrowRightIcon
@@ -45,6 +46,17 @@ export function ProjectDetail({ c, headingId }: { c: Client; headingId?: string 
             className="transition-transform duration-200 group-hover:translate-x-0.5"
           />
         </a>
+          {c.extra ? (
+            <a
+              href={c.extra.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 items-center rounded-lg border border-line-strong px-5 text-sm font-medium text-fg transition-colors hover:bg-white/[0.06]"
+            >
+              {c.extra.label}
+            </a>
+          ) : null}
+        </div>
       </div>
     </div>
   );

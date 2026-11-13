@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { ProjectDetail } from "@/components/clients/ProjectDetail";
-import { CLIENTS } from "@/lib/clients";
+import type { Client } from "@/lib/clients";
 
 /** Pick a project, see all of its details in one view. */
-export function ClientsExplorer() {
+export function ClientsExplorer({ projects }: { projects: Client[] }) {
   const [i, setI] = useState(0);
-  const c = CLIENTS[i];
+  const c = projects[i];
 
   return (
     <div>
@@ -16,7 +16,7 @@ export function ClientsExplorer() {
         aria-label="Projects"
         className="flex gap-1 overflow-x-auto border-b border-line [scrollbar-width:none]"
       >
-        {CLIENTS.map((p, n) => (
+        {projects.map((p, n) => (
           <button
             key={p.slug}
             type="button"

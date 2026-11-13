@@ -4,10 +4,12 @@ export type Client = {
   /** Short category line, e.g. "Event booking platform". */
   kind: string;
   /** Who it was built for. */
-  client: string;
+  client?: string;
   summary: string;
   features: string[];
   href: string;
+  /** Optional secondary link, e.g. a store listing. */
+  extra?: { label: string; href: string };
   /** Project accent colour, used for small details only. */
   brand: string;
   /** Screenshots from /public/images, first one is shown by default. */

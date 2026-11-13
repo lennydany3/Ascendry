@@ -6,6 +6,7 @@ import { SkipLink } from "@/components/layout/SkipLink";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Container } from "@/components/ui/Container";
 import { ChatIcon, MailIcon } from "@/components/ui/Icons";
+import { CLIENTS } from "@/lib/clients";
 import { SITE } from "@/lib/site";
 
 export function ClientsPage() {
@@ -30,7 +31,7 @@ export function ClientsPage() {
                 Choose a project to see what we built and how it looks.
               </p>
             </div>
-            <ClientsExplorer />
+            <ClientsExplorer projects={CLIENTS} />
           </Container>
         </section>
 
