@@ -7,7 +7,6 @@ import { MarkOutline } from "@/components/ui/MarkOutline";
 import { ArrowRightIcon, ChatIcon, MailIcon, PhoneIcon } from "@/components/ui/Icons";
 import { SITE } from "@/lib/site";
 import { Rich } from "./Rich";
-import { ScrollTop } from "./ScrollTop";
 import { TocNav } from "./TocNav";
 import { LEGAL_DOCS, type Block, type LegalDoc } from "./content";
 
@@ -111,7 +110,6 @@ export function LegalPage({ doc }: { doc: LegalDoc }) {
   return (
     <>
       <SkipLink />
-      <ScrollTop />
       <Header brand="legal" />
       <main id="main">
         {/* Title block: blueprint hero built around the Ascendry wireframe mark */}

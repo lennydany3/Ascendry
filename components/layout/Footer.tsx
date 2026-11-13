@@ -21,10 +21,11 @@ const pages = {
     { label: "Ascendry Labs", href: "/labs" },
   ],
   labs: [
-    { label: "Lab", href: "#lab" },
-    { label: "Approach", href: "#approach" },
-    { label: "Principles", href: "#principles" },
-    { label: "Contact", href: "#contact" },
+    { label: "Lab", href: "/labs#lab" },
+    { label: "Approach", href: "/labs#approach" },
+    { label: "Principles", href: "/labs#principles" },
+    { label: "Products", href: "/labs/products" },
+    { label: "Contact", href: "/labs#contact" },
     { label: "Ascendry Studio", href: "/" },
   ],
 };
