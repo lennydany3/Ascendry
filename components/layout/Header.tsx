@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { Logo, LogoMark } from "@/components/ui/Logo";
 
 const links = [
@@ -34,7 +34,20 @@ function Arrow() {
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const [active, setActive] = useState<string>("");
+
+  const close = useCallback(() => {
+    setClosing(true);
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.setTimeout(
+      () => {
+        setOpen(false);
+        setClosing(false);
+      },
+      reduced ? 0 : 320,
+    );
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -65,13 +78,13 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
     };
-  }, [open]);
+  }, [open, close]);
 
   return (
     <>
@@ -154,7 +167,7 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
-          className="anim-fade fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-bg px-5 pt-3 pb-[max(2rem,env(safe-area-inset-bottom))]"
+          className={`${closing ? "menu-out pointer-events-none" : "anim-fade"} fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-bg px-5 pt-3 pb-[max(2rem,env(safe-area-inset-bottom))]`}
           style={{ "--d": "0ms" } as CSSProperties}
         >
           <div
@@ -170,7 +183,7 @@ export function Header() {
             </span>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={close}
               aria-label="Close menu"
               className="flex size-11 cursor-pointer items-center justify-center rounded-lg border border-line bg-white/[0.03] text-fg"
             >
@@ -198,7 +211,7 @@ export function Header() {
               <Link
                 key={l.label}
                 href={l.href}
-                onClick={() => setOpen(false)}
+                onClick={close}
                 className="anim-menu group flex items-baseline justify-between border-b border-line py-5"
                 style={{ "--i": i } as CSSProperties}
               >
@@ -223,7 +236,7 @@ export function Header() {
           >
             <Link
               href="#contact"
-              onClick={() => setOpen(false)}
+              onClick={close}
               className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-fg text-sm font-medium text-bg"
             >
               Get a quote

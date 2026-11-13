@@ -87,6 +87,10 @@ h3 {
   72% { transform: translateY(-1.6px); opacity: 1; }
   100% { transform: none; opacity: 1; }
 }
+@keyframes menu-out {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0; transform: translateY(-16px); }
+}
 @keyframes menu-link {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: none; }
@@ -107,6 +111,9 @@ h3 {
   opacity: 0;
   animation: fade-in 700ms var(--ease-out) both;
   animation-delay: var(--d, 0ms);
+}
+.menu-out {
+  animation: menu-out 320ms var(--ease-out) both;
 }
 .anim-menu {
   opacity: 0;
