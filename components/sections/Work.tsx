@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { ClientProjects } from "@/components/clients/ClientProjects";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -168,7 +169,12 @@ export function Work() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mt-16">
+        <div className="mt-14 md:mt-16">
+          <ClientProjects />
+        </div>
+
+        <p className="mt-16 font-mono text-xs tracking-[0.16em] text-fg-subtle uppercase md:mt-20">Demo sites</p>
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {demos.map((d, i) => {
             return (
               <Reveal key={d.name} delay={(i % 3) * 60}>

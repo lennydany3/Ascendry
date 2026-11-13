@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { Logo, LogoMark } from "@/components/ui/Logo";
 import { SITE } from "@/lib/site";
 
-export type Brand = "studio" | "labs" | "legal" | "products";
+export type Brand = "studio" | "labs" | "legal" | "products" | "clients";
 
 const config = {
   studio: {
@@ -16,9 +16,22 @@ const config = {
       { label: "Work", href: "#work" },
       { label: "Services", href: "#services" },
       { label: "About", href: "#about" },
+      { label: "Clients", href: "/clients" },
     ],
     cta: "Get a quote",
     ctaHref: "#contact",
+  },
+  clients: {
+    home: "/",
+    tag: "Studio",
+    links: [
+      { label: "Work", href: "/#work" },
+      { label: "Services", href: "/#services" },
+      { label: "About", href: "/#about" },
+      { label: "Clients", href: "/clients" },
+    ],
+    cta: "Get a quote",
+    ctaHref: "/#contact",
   },
   labs: {
     home: "/labs",
@@ -58,7 +71,7 @@ const config = {
 } as const;
 
 function BrandSwitch({ brand: current, className = "" }: { brand: Brand; className?: string }) {
-  const brand = current === "products" ? "labs" : current;
+  const brand = current === "products" ? "labs" : current === "clients" ? "studio" : current;
   return (
     <div
       role="group"
@@ -151,7 +164,7 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
 
   // Scroll-spy: highlight the nav link of the section crossing the viewport middle.
   useEffect(() => {
-    const ids = brand === "legal" || brand === "products" ? [] : [...config[brand].links.map((l) => l.href.slice(1)), "contact"];
+    const ids = brand === "legal" || brand === "products" || brand === "clients" ? [] : [...config[brand].links.map((l) => l.href.slice(1)), "contact"];
     const els = ids
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el);
@@ -202,7 +215,12 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
               className="hidden items-center gap-1 rounded-full border border-white/15 bg-white/[0.05] p-1 md:flex"
             >
               {links.map((l) => {
-                const on = brand === "legal" || brand === "products" ? pathname === l.href : active === l.href.slice(1);
+                const on =
+                  brand === "clients"
+                    ? l.href === "/clients"
+                    : brand === "legal" || brand === "products"
+                      ? pathname === l.href
+                      : active === l.href.slice(1);
                 return (
                   <Link
                     key={l.label}
