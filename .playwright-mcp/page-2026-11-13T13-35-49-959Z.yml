@@ -1,0 +1,143 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to content" [ref=f2e94] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f2e95]:
+    - generic [ref=f2e97]:
+      - link "Ascendry home" [ref=f2e99] [cursor=pointer]:
+        - /url: /labs
+        - generic [ref=f2e105]: ASCENDRY
+        - generic [ref=f2e106]: Labs
+      - navigation "Primary" [ref=f2e107]:
+        - link "Lab" [ref=f2e108] [cursor=pointer]:
+          - /url: /labs#lab
+        - link "Approach" [ref=f2e109] [cursor=pointer]:
+          - /url: /labs#approach
+        - link "Principles" [ref=f2e110] [cursor=pointer]:
+          - /url: /labs#principles
+        - link "Products" [ref=f2e111] [cursor=pointer]:
+          - /url: /labs/products
+      - generic [ref=f2e112]:
+        - group "Switch between Ascendry Studio and Labs" [ref=f2e113]:
+          - link "Studio" [ref=f2e114] [cursor=pointer]:
+            - /url: /
+          - link "Labs" [ref=f2e115] [cursor=pointer]:
+            - /url: /labs
+        - link "Get in touch" [ref=f2e116] [cursor=pointer]:
+          - /url: /labs#contact
+  - main [ref=f2e119]:
+    - generic [ref=f2e121]:
+      - link "Ascendry Labs" [ref=f2e122] [cursor=pointer]:
+        - /url: /labs
+        - generic [aria-hidden] [ref=f2e123]: ←
+        - text: Ascendry Labs
+      - generic [ref=f2e124]:
+        - heading [level=1] [ref=f2e125]:
+          - text: What we've
+          - emphasis [ref=f2e126]: built
+          - text: .
+        - paragraph [ref=f2e127]: Products designed, engineered and launched in-house by Ascendry Labs.
+      - generic [ref=f2e128]:
+        - tablist "Projects" [ref=f2e129]:
+          - tab "01 Crest" [selected] [ref=f2e130] [cursor=pointer]:
+            - generic [ref=f2e131]: "01"
+            - generic [ref=f2e132]: Crest
+          - tab "02 Tide" [ref=f2e133] [cursor=pointer]:
+            - generic [ref=f2e134]: "02"
+            - generic [ref=f2e135]: Tide
+          - tab "03 Lenny Dany" [ref=f2e136] [cursor=pointer]:
+            - generic [ref=f2e137]: "03"
+            - generic [ref=f2e138]: Lenny Dany
+        - tabpanel "01 Crest" [ref=f2e139]:
+          - generic [ref=f2e140]:
+            - generic [ref=f2e141]:
+              - generic [ref=f2e142]:
+                - generic [ref=f2e143]: crest-beta.vercel.app
+                - generic [ref=f2e149]:
+                  - img "Crest website landing page" [ref=f2e150]
+                  - img "Crest feature overview"
+                  - img "Crest notch overlay demo"
+                  - img "Crest media player in the notch"
+              - tablist "Crest screens" [ref=f2e151]:
+                - tab "Show Landing screen" [selected] [ref=f2e152] [cursor=pointer]:
+                  - generic [ref=f2e154]: Landing
+                - tab "Show Features screen" [ref=f2e155] [cursor=pointer]:
+                  - generic [ref=f2e157]: Features
+                - tab "Show Demo screen" [ref=f2e158] [cursor=pointer]:
+                  - generic [ref=f2e160]: Demo
+                - tab "Show Music player screen" [ref=f2e161] [cursor=pointer]:
+                  - generic [ref=f2e163]: Music player
+            - generic [ref=f2e164]:
+              - paragraph [ref=f2e165]: Windows app
+              - heading "Crest" [level=2] [ref=f2e167]
+              - paragraph [ref=f2e168]: Crest Notch is a dynamic notch for Windows, built with Tauri and React. A notch-style overlay at the top of the screen puts media controls, a file shelf, quick notes, a calendar, screenshots, clipboard history, system monitoring and notifications one glance away. Live on the Microsoft Store.
+              - list [ref=f2e169]:
+                - listitem [ref=f2e170]: Media controls and a file shelf in the notch
+                - listitem [ref=f2e171]: Quick notes, calendar and clipboard history
+                - listitem [ref=f2e172]: Screenshots and system monitoring
+                - listitem [ref=f2e173]: In-notch notifications
+              - generic [ref=f2e174]:
+                - link "Visit live site" [ref=f2e175] [cursor=pointer]:
+                  - /url: https://crest-beta.vercel.app/
+                - link "Microsoft Store" [ref=f2e178] [cursor=pointer]:
+                  - /url: https://apps.microsoft.com/detail/9NR4HXTLDN0S
+    - generic [ref=f2e180]:
+      - paragraph [ref=f2e181]: — Early access
+      - heading [level=2] [ref=f2e182]:
+        - text: Want to try a product
+        - emphasis [ref=f2e183]: first
+        - text: "?"
+      - paragraph [ref=f2e184]: Tell us what you'd like to use and we'll keep you in the loop.
+      - generic [ref=f2e185]:
+        - link "Chat on WhatsApp" [ref=f2e186] [cursor=pointer]:
+          - /url: https://wa.me/919043556745
+        - link "lennydany3@gmail.com" [ref=f2e191] [cursor=pointer]:
+          - /url: mailto:lennydany3@gmail.com
+  - contentinfo [ref=f2e195]:
+    - generic [ref=f2e196]:
+      - generic [ref=f2e197]:
+        - generic [ref=f2e198]:
+          - link "Ascendry home" [ref=f2e199] [cursor=pointer]:
+            - /url: /labs
+            - generic [ref=f2e205]: ASCENDRY
+            - generic [ref=f2e206]: Labs
+          - paragraph [ref=f2e207]: Our own startup ideas, built and launched in the open by Ascendry.
+        - generic [ref=f2e208]:
+          - paragraph [ref=f2e209]: Pages
+          - link "Lab" [ref=f2e210] [cursor=pointer]:
+            - /url: /labs#lab
+          - link "Approach" [ref=f2e211] [cursor=pointer]:
+            - /url: /labs#approach
+          - link "Principles" [ref=f2e212] [cursor=pointer]:
+            - /url: /labs#principles
+          - link "Products" [ref=f2e213] [cursor=pointer]:
+            - /url: /labs/products
+          - link "Contact" [ref=f2e214] [cursor=pointer]:
+            - /url: /labs#contact
+          - link "Ascendry Studio" [ref=f2e215] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f2e216]:
+          - paragraph [ref=f2e217]: Legal
+          - link "Privacy policy" [ref=f2e218] [cursor=pointer]:
+            - /url: /legal/privacy-policy
+          - link "Terms & conditions" [ref=f2e219] [cursor=pointer]:
+            - /url: /legal/terms-and-conditions
+          - link "Refund & cancellation" [ref=f2e220] [cursor=pointer]:
+            - /url: /legal/refund-cancellation
+          - button "Cookie settings" [ref=f2e221] [cursor=pointer]
+        - generic [ref=f2e222]:
+          - paragraph [ref=f2e223]: Contact
+          - link "lennydany3@gmail.com" [ref=f2e224] [cursor=pointer]:
+            - /url: mailto:lennydany3@gmail.com
+          - link "+91 90435 56745" [ref=f2e228] [cursor=pointer]:
+            - /url: tel:+919043556745
+          - generic [ref=f2e231]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+      - generic [ref=f2e235]:
+        - generic [ref=f2e236]: © 2026 Ascendry · Chennai, India
+        - generic [ref=f2e237]: Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
+        - link "Back to top" [ref=f2e238] [cursor=pointer]:
+          - /url: "#main"
+    - generic [aria-hidden] [ref=f2e242]: ASCENDRY
+  - link "Chat on WhatsApp" [ref=f2e243] [cursor=pointer]:
+    - /url: https://wa.me/919043556745
+  - button "Open Next.js Dev Tools" [ref=f2e251] [cursor=pointer]
+  - alert [ref=f2e255]
