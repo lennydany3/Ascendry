@@ -3,6 +3,7 @@ import { ArrowRightIcon, ChatIcon, MailIcon } from "@/components/ui/Icons";
 import { MarkOutline } from "@/components/ui/MarkOutline";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SITE } from "@/lib/site";
 
 const steps = [
   { n: "01", title: "Tell us about your business", text: "A quick message on WhatsApp or email is enough." },
@@ -44,7 +45,7 @@ export function Contact() {
             />
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href="https://wa.me/91XXXXXXXXXX"
+                href={SITE.whatsapp}
                 className="group inline-flex h-12 items-center justify-center gap-2.5 rounded-md bg-invert-fg px-6 text-sm font-medium text-invert-bg transition-colors duration-150 hover:bg-[#262626]"
               >
                 <ChatIcon width={18} height={18} />
@@ -56,11 +57,11 @@ export function Contact() {
                 />
               </a>
               <a
-                href="mailto:hello@ascendry.in"
+                href={`mailto:${SITE.email}`}
                 className="inline-flex h-12 items-center justify-center gap-2.5 rounded-md border border-black/20 px-6 text-sm font-medium text-invert-fg transition-colors duration-150 hover:bg-black/5"
               >
                 <MailIcon width={18} height={18} />
-                hello@ascendry.in
+                {SITE.email}
               </a>
             </div>
           </Reveal>

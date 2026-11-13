@@ -1,0 +1,365 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Ascendry home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e13]: ASCENDRY
+        - generic [ref=e14]: Legal
+      - navigation "Primary" [ref=e15]:
+        - link "Privacy" [ref=e16] [cursor=pointer]:
+          - /url: /legal/privacy-policy
+        - link "Terms" [ref=e17] [cursor=pointer]:
+          - /url: /legal/terms-and-conditions
+        - link "Refunds" [ref=e18] [cursor=pointer]:
+          - /url: /legal/refund-cancellation
+      - generic [ref=e19]:
+        - group "Switch between Ascendry Studio and Labs" [ref=e20]:
+          - link "Studio" [ref=e21] [cursor=pointer]:
+            - /url: /
+          - link "Labs" [ref=e22] [cursor=pointer]:
+            - /url: /labs
+        - link "Get a quote" [ref=e23] [cursor=pointer]:
+          - /url: /#contact
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - generic [aria-hidden]:
+        - generic:
+          - generic: 01 — Clarity
+          - generic: 02 — Trust
+          - generic: 03 — Fair terms
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: Legal & trust
+        - heading "Privacy Policy" [level=1] [ref=e31]
+        - paragraph [ref=e32]: What we collect, why we collect it, and the control you have over your information.
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - term [ref=e35]: Last updated
+            - definition [ref=e36]: 13 November 2026
+          - generic [ref=e37]:
+            - term [ref=e38]: Sections
+            - definition [ref=e39]: "12"
+          - generic [ref=e40]:
+            - term [ref=e41]: Registered
+            - definition [ref=e42]: MSME · UDYAM-TN-02-0445785
+        - navigation "Legal pages" [ref=e43]:
+          - link "Privacy Policy" [ref=e44] [cursor=pointer]:
+            - /url: /legal/privacy-policy
+          - link "Terms & Conditions" [ref=e45] [cursor=pointer]:
+            - /url: /legal/terms-and-conditions
+          - link "Refund & Cancellation" [ref=e46] [cursor=pointer]:
+            - /url: /legal/refund-cancellation
+    - generic [ref=e48]:
+      - complementary [ref=e49]:
+        - navigation "On this page" [ref=e51]:
+          - paragraph [ref=e52]: On this page
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - link "01 Who we are" [ref=e55] [cursor=pointer]:
+                - /url: "#who-we-are"
+                - generic [ref=e56]: "01"
+                - text: Who we are
+            - listitem [ref=e57]:
+              - link "02 Information we collect" [ref=e58] [cursor=pointer]:
+                - /url: "#information-we-collect"
+                - generic [ref=e59]: "02"
+                - text: Information we collect
+            - listitem [ref=e60]:
+              - link "03 How we use your information" [ref=e61] [cursor=pointer]:
+                - /url: "#how-we-use-it"
+                - generic [ref=e62]: "03"
+                - text: How we use your information
+            - listitem [ref=e63]:
+              - link "04 Client projects" [ref=e64] [cursor=pointer]:
+                - /url: "#client-projects"
+                - generic [ref=e65]: "04"
+                - text: Client projects
+            - listitem [ref=e66]:
+              - link "05 Sharing your information" [ref=e67] [cursor=pointer]:
+                - /url: "#sharing"
+                - generic [ref=e68]: "05"
+                - text: Sharing your information
+            - listitem [ref=e69]:
+              - link "06 Cookies and analytics" [ref=e70] [cursor=pointer]:
+                - /url: "#cookies"
+                - generic [ref=e71]: "06"
+                - text: Cookies and analytics
+            - listitem [ref=e72]:
+              - link "07 Data storage and security" [ref=e73] [cursor=pointer]:
+                - /url: "#storage-and-security"
+                - generic [ref=e74]: "07"
+                - text: Data storage and security
+            - listitem [ref=e75]:
+              - link "08 How long we keep information" [ref=e76] [cursor=pointer]:
+                - /url: "#retention"
+                - generic [ref=e77]: "08"
+                - text: How long we keep information
+            - listitem [ref=e78]:
+              - link "09 Your rights" [ref=e79] [cursor=pointer]:
+                - /url: "#your-rights"
+                - generic [ref=e80]: "09"
+                - text: Your rights
+            - listitem [ref=e81]:
+              - link "10 Children" [ref=e82] [cursor=pointer]:
+                - /url: "#children"
+                - generic [ref=e83]: "10"
+                - text: Children
+            - listitem [ref=e84]:
+              - link "11 Grievance Officer" [ref=e85] [cursor=pointer]:
+                - /url: "#grievance-officer"
+                - generic [ref=e86]: "11"
+                - text: Grievance Officer
+            - listitem [ref=e87]:
+              - link "12 Changes to this policy" [ref=e88] [cursor=pointer]:
+                - /url: "#changes"
+                - generic [ref=e89]: "12"
+                - text: Changes to this policy
+      - generic [ref=e90]:
+        - article [ref=e91]:
+          - region "Who we are" [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: "01"
+              - heading "Who we are" [level=2] [ref=e95]
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: "Ascendry is an MSME (Udyam) registered business based in Chennai, Tamil Nadu, India. We run two divisions:"
+              - list [ref=e98]:
+                - listitem [ref=e99]:
+                  - generic [ref=e101]:
+                    - strong [ref=e102]: Ascendry Studio
+                    - text: "builds client work: websites, booking engines, payment flows, WhatsApp automation, admin dashboards, customer portals, inventory systems, loyalty programs, custom APIs, AI workflows and analytics."
+                - listitem [ref=e103]:
+                  - generic [ref=e105]:
+                    - strong [ref=e106]: Ascendry Labs
+                    - text: builds and launches Ascendry's own software products in-house.
+              - paragraph [ref=e107]: This policy explains how we handle personal information across our website, our client work and our products. If you have a question, write to us at lennydany3@gmail.com or call +91 90435 56745.
+          - region "Information we collect" [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: "02"
+              - heading "Information we collect" [level=2] [ref=e111]
+            - generic [ref=e112]:
+              - heading "Information you give us" [level=3] [ref=e113]
+              - list [ref=e114]:
+                - listitem [ref=e115]:
+                  - generic [ref=e117]: Your name, email address and phone number.
+                - listitem [ref=e118]:
+                  - generic [ref=e120]: Business details and project briefs you share with us.
+                - listitem [ref=e121]:
+                  - generic [ref=e123]: Files, logos, images and other material you send.
+              - heading "Information collected automatically" [level=3] [ref=e124]
+              - list [ref=e125]:
+                - listitem [ref=e126]:
+                  - generic [ref=e128]: Your IP address, device and browser type.
+                - listitem [ref=e129]:
+                  - generic [ref=e131]: The pages you visit and how you move around the site.
+                - listitem [ref=e132]:
+                  - generic [ref=e134]: Cookies and similar technologies (see section 6).
+              - heading "Payment information" [level=3] [ref=e135]
+              - paragraph [ref=e136]:
+                - text: Payments are processed by Razorpay (cards, UPI, net banking and wallets). We receive a transaction ID and payment status.
+                - strong [ref=e137]: We do not see or store your card details.
+              - heading "Ascendry Labs products" [level=3] [ref=e138]
+              - paragraph [ref=e139]: If you use a Labs product, we collect account data and usage data needed to run it. Each product may have its own additional privacy notice, which applies alongside this policy.
+          - region "How we use your information" [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: "03"
+              - heading "How we use your information" [level=2] [ref=e143]
+            - generic [ref=e144]:
+              - list [ref=e145]:
+                - listitem [ref=e146]:
+                  - generic [ref=e148]: Replying to your enquiries and preparing quotes.
+                - listitem [ref=e149]:
+                  - generic [ref=e151]: Delivering projects and providing support.
+                - listitem [ref=e152]:
+                  - generic [ref=e154]: Invoicing and keeping accounts.
+                - listitem [ref=e155]:
+                  - generic [ref=e157]: Improving our website and products.
+                - listitem [ref=e158]:
+                  - generic [ref=e160]: Meeting our legal and tax obligations.
+              - paragraph [ref=e161]:
+                - strong [ref=e162]: We do not sell your personal data.
+          - region "Client projects" [ref=e163]:
+            - generic [ref=e164]:
+              - generic [ref=e165]: "04"
+              - heading "Client projects" [level=2] [ref=e166]
+            - paragraph [ref=e168]: When we build a system for a client, the data of that client's own customers belongs to the client. We process it only to build and maintain the system, and only on the client's instructions. If you are a customer of one of our clients, please contact that business first about your data.
+          - region "Sharing your information" [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e171]: "05"
+              - heading "Sharing your information" [level=2] [ref=e172]
+            - generic [ref=e173]:
+              - paragraph [ref=e174]: "We share information only with service providers we need to run our business, and only as far as necessary:"
+              - list [ref=e175]:
+                - listitem [ref=e176]:
+                  - generic [ref=e178]: Hosting and cloud storage providers.
+                - listitem [ref=e179]:
+                  - generic [ref=e181]: Email and communication tools.
+                - listitem [ref=e182]:
+                  - generic [ref=e184]: Analytics providers.
+                - listitem [ref=e185]:
+                  - generic [ref=e187]: Our payment gateway, Razorpay.
+              - paragraph [ref=e188]: We may also share information when the law requires it, for example in response to a lawful request from a court or authority.
+          - region "Cookies and analytics" [ref=e189]:
+            - generic [ref=e190]:
+              - generic [ref=e191]: "06"
+              - heading "Cookies and analytics" [level=2] [ref=e192]
+            - generic [ref=e193]:
+              - paragraph [ref=e194]: "Cookies are small files stored on your device. We use:"
+              - list [ref=e195]:
+                - listitem [ref=e196]:
+                  - generic [ref=e198]:
+                    - strong [ref=e199]: Essential cookies
+                    - text: ", which keep the site working and remember your cookie choice."
+                - listitem [ref=e200]:
+                  - generic [ref=e202]:
+                    - strong [ref=e203]: Analytics cookies
+                    - text: ", only if you accept them, to understand which pages are useful."
+              - paragraph [ref=e204]: You can accept or reject non-essential cookies in the banner shown on your first visit, and change your choice at any time using “Cookie settings” in the footer. You can also block or delete cookies in your browser settings. Some parts of the site may not work properly if you block essential cookies.
+          - region "Data storage and security" [ref=e205]:
+            - generic [ref=e206]:
+              - generic [ref=e207]: "07"
+              - heading "Data storage and security" [level=2] [ref=e208]
+            - generic [ref=e209]:
+              - paragraph [ref=e210]: We follow reasonable security practices to protect your information from loss, misuse and unauthorised access. No system is completely secure, but we take care to limit access and use trusted providers.
+              - paragraph [ref=e211]: Some of our providers are reputable companies that may store data on servers outside India. By using our services you understand your information may be processed in those locations.
+          - region "How long we keep information" [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]: "08"
+              - heading "How long we keep information" [level=2] [ref=e215]
+            - paragraph [ref=e217]: We keep personal information only for as long as we need it for the purpose it was collected. Invoices and accounting records are kept for the period required by Indian tax law. When information is no longer needed, we delete or anonymise it.
+          - region "Your rights" [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: "09"
+              - heading "Your rights" [level=2] [ref=e221]
+            - generic [ref=e222]:
+              - paragraph [ref=e223]: "You can ask us to:"
+              - list [ref=e224]:
+                - listitem [ref=e225]:
+                  - generic [ref=e227]: Show you the personal information we hold about you.
+                - listitem [ref=e228]:
+                  - generic [ref=e230]: Correct information that is wrong or incomplete.
+                - listitem [ref=e231]:
+                  - generic [ref=e233]: Delete your information, where we are not required to keep it.
+                - listitem [ref=e234]:
+                  - generic [ref=e236]: Withdraw consent you have given us.
+                - listitem [ref=e237]:
+                  - generic [ref=e239]: Nominate another person to exercise these rights for you.
+              - paragraph [ref=e240]: To make a request, email lennydany3@gmail.com from the address linked to your information. We will respond within a reasonable time, and aim to do so within 30 days.
+          - region "Children" [ref=e241]:
+            - generic [ref=e242]:
+              - generic [ref=e243]: "10"
+              - heading "Children" [level=2] [ref=e244]
+            - paragraph [ref=e246]: Our services are not directed at anyone under 18. We do not knowingly collect personal data from children. If you believe a child has given us information, please contact us and we will delete it.
+          - region "Grievance Officer" [ref=e247]:
+            - generic [ref=e248]:
+              - generic [ref=e249]: "11"
+              - heading "Grievance Officer" [level=2] [ref=e250]
+            - generic [ref=e251]:
+              - paragraph [ref=e252]: "If you have a concern or complaint about how we handle your information, please contact our Grievance Officer:"
+              - list [ref=e253]:
+                - listitem [ref=e254]:
+                  - generic [ref=e256]:
+                    - strong [ref=e257]: "Name:"
+                    - text: Lenny Dany Derek D
+                - listitem [ref=e258]:
+                  - generic [ref=e260]:
+                    - strong [ref=e261]: "Email:"
+                    - text: lennydany3@gmail.com
+                - listitem [ref=e262]:
+                  - generic [ref=e264]:
+                    - strong [ref=e265]: "Phone:"
+                    - text: +91 90435 56745
+              - paragraph [ref=e266]: We acknowledge complaints within 48 hours and aim to resolve them within 30 days.
+          - region "Changes to this policy" [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269]: "12"
+              - heading "Changes to this policy" [level=2] [ref=e270]
+            - generic [ref=e271]:
+              - paragraph [ref=e272]: We may update this policy from time to time. The “Last updated” date at the top shows when it last changed. If we make a significant change, we will make that clear on the website.
+              - paragraph [ref=e273]: This policy is written in line with the Information Technology Act, 2000 and its rules, and the Digital Personal Data Protection Act, 2023.
+        - region "Contact us" [ref=e275]:
+          - generic [ref=e276]:
+            - generic [ref=e277]:
+              - heading "Contact us" [level=2] [ref=e278]
+              - paragraph [ref=e279]: Questions about this page? We're happy to help.
+            - generic [ref=e280]:
+              - link "Email" [ref=e281] [cursor=pointer]:
+                - /url: mailto:lennydany3@gmail.com
+              - link "Call" [ref=e285] [cursor=pointer]:
+                - /url: tel:+919043556745
+              - link "WhatsApp" [ref=e288] [cursor=pointer]:
+                - /url: https://wa.me/919043556745
+          - generic [ref=e291]:
+            - generic [ref=e292]:
+              - term [ref=e293]: Business
+              - definition [ref=e294]: Ascendry
+            - generic [ref=e295]:
+              - term [ref=e296]: Udyam registration
+              - definition [ref=e297]: UDYAM-TN-02-0445785
+            - generic [ref=e298]:
+              - term [ref=e299]: Address
+              - definition [ref=e300]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+            - generic [ref=e301]:
+              - term [ref=e302]: Email
+              - definition [ref=e303]: lennydany3@gmail.com
+            - generic [ref=e304]:
+              - term [ref=e305]: Phone
+              - definition [ref=e306]: +91 90435 56745
+            - generic [ref=e307]:
+              - term [ref=e308]: Website
+              - definition [ref=e309]: ascendry.vercel.app
+        - generic [ref=e310]:
+          - link "Also read Terms & Conditions" [ref=e311] [cursor=pointer]:
+            - /url: /legal/terms-and-conditions
+            - generic [ref=e312]:
+              - generic [ref=e313]: Also read
+              - generic [ref=e314]: Terms & Conditions
+          - link "Also read Refund & Cancellation" [ref=e317] [cursor=pointer]:
+            - /url: /legal/refund-cancellation
+            - generic [ref=e318]:
+              - generic [ref=e319]: Also read
+              - generic [ref=e320]: Refund & Cancellation
+  - contentinfo [ref=e323]:
+    - generic [ref=e324]:
+      - generic [ref=e325]:
+        - generic [ref=e326]:
+          - link "Ascendry home" [ref=e327] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e333]: ASCENDRY
+            - generic [ref=e334]: Studio
+          - paragraph [ref=e335]: Websites, booking systems and automation for small and growing businesses in India and the US.
+        - generic [ref=e336]:
+          - paragraph [ref=e337]: Pages
+          - link "Work" [ref=e338] [cursor=pointer]:
+            - /url: /#work
+          - link "Services" [ref=e339] [cursor=pointer]:
+            - /url: /#services
+          - link "About" [ref=e340] [cursor=pointer]:
+            - /url: /#about
+          - link "Contact" [ref=e341] [cursor=pointer]:
+            - /url: /#contact
+          - link "Ascendry Labs" [ref=e342] [cursor=pointer]:
+            - /url: /labs
+        - generic [ref=e343]:
+          - paragraph [ref=e344]: Legal
+          - link "Privacy policy" [ref=e345] [cursor=pointer]:
+            - /url: /legal/privacy-policy
+          - link "Terms & conditions" [ref=e346] [cursor=pointer]:
+            - /url: /legal/terms-and-conditions
+          - link "Refund & cancellation" [ref=e347] [cursor=pointer]:
+            - /url: /legal/refund-cancellation
+          - button "Cookie settings" [ref=e348] [cursor=pointer]
+        - generic [ref=e349]:
+          - paragraph [ref=e350]: Contact
+          - link "lennydany3@gmail.com" [ref=e351] [cursor=pointer]:
+            - /url: mailto:lennydany3@gmail.com
+          - link "+91 90435 56745" [ref=e355] [cursor=pointer]:
+            - /url: tel:+919043556745
+          - generic [ref=e358]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+      - generic [ref=e362]:
+        - generic [ref=e363]: © 2026 Ascendry · Chennai, India
+        - generic [ref=e364]: Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
+        - link "Back to top" [ref=e365] [cursor=pointer]:
+          - /url: "#main"
+    - generic [aria-hidden] [ref=e369]: ASCENDRY
+  - button "Open Next.js Dev Tools" [ref=e375] [cursor=pointer]

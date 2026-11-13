@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { ArrowUpIcon, ChatIcon, MailIcon, PinIcon } from "@/components/ui/Icons";
+import { ArrowUpIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/ui/Icons";
+import { CookieSettingsButton } from "@/components/legal/CookieConsent";
 import { Logo } from "@/components/ui/Logo";
 import { MarkOutline } from "@/components/ui/MarkOutline";
+import { SITE } from "@/lib/site";
 
 async function getYear() {
   "use cache";
@@ -12,10 +14,10 @@ async function getYear() {
 
 const pages = {
   studio: [
-    { label: "Work", href: "#work" },
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Work", href: "/#work" },
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
     { label: "Ascendry Labs", href: "/labs" },
   ],
   labs: [
@@ -31,7 +33,11 @@ const blurb = {
     "Websites, booking systems and automation for small and growing businesses in India and the US.",
   labs: "Our own startup ideas, built and launched in the open by Ascendry.",
 };
-const legal = ["Privacy policy", "Terms & conditions", "Refund & cancellation"];
+const legal = [
+  { label: "Privacy policy", href: "/legal/privacy-policy" },
+  { label: "Terms & conditions", href: "/legal/terms-and-conditions" },
+  { label: "Refund & cancellation", href: "/legal/refund-cancellation" },
+];
 
 const linkCls =
   "text-sm text-fg-muted transition-colors duration-150 hover:text-fg";
@@ -76,26 +82,26 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
           <div className="flex flex-[1_1_160px] flex-col gap-3.5">
             <Eyebrow className="mb-1.5">Legal</Eyebrow>
             {legal.map((l) => (
-              <Link key={l} href="#" className={linkCls}>
-                {l}
+              <Link key={l.href} href={l.href} className={linkCls}>
+                {l.label}
               </Link>
             ))}
+            <CookieSettingsButton className={linkCls} />
           </div>
 
           <div className="flex flex-[1_1_240px] flex-col gap-3.5">
             <Eyebrow className="mb-1.5">Contact</Eyebrow>
-            <a href="mailto:hello@ascendry.in" className={`${linkCls} flex items-center gap-2.5`}>
+            <a href={`mailto:${SITE.email}`} className={`${linkCls} flex items-center gap-2.5`}>
               <MailIcon width={16} height={16} className="shrink-0 text-fg-subtle" />
-              hello@ascendry.in
+              {SITE.email}
             </a>
-            <a href="https://wa.me/91XXXXXXXXXX" className={`${linkCls} flex items-center gap-2.5`}>
-              <ChatIcon width={16} height={16} className="shrink-0 text-fg-subtle" />
-              WhatsApp +91 XXXXXXXXXX
+            <a href={`tel:${SITE.phoneTel}`} className={`${linkCls} flex items-center gap-2.5`}>
+              <PhoneIcon width={16} height={16} className="shrink-0 text-fg-subtle" />
+              {SITE.phoneDisplay}
             </a>
             <span className="flex max-w-[30ch] items-start gap-2.5 text-sm leading-[1.6] text-fg-subtle">
               <PinIcon width={16} height={16} className="mt-[3px] shrink-0" />
-              3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil
-              Nadu, India
+              {SITE.address}
             </span>
           </div>
         </div>

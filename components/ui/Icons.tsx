@@ -39,3 +39,8 @@ export const ArrowUpIcon = (p: SVGProps<SVGSVGElement>) => (
     <path d="M12 20V4M6 10l6-6 6 6" />
   </svg>
 );
+export const PhoneIcon = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base} {...p}>
+    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" />
+  </svg>
+);

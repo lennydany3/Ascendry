@@ -10,6 +10,12 @@ const words = [
   { w: "products.", italic: true },
 ];
 
+const stages = [
+  { name: "Idea", note: "Sketched & tested" },
+  { name: "Prototype", note: "Built in-house" },
+  { name: "Launch", note: "Shipped & improved" },
+];
+
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
 /** Exploded-view illustration: wireframe -> glass -> chrome (public/labs-hero.svg). */
@@ -48,16 +54,6 @@ export function LabsHero() {
 
       <div className="relative mx-auto grid w-full max-w-[1296px] flex-1 content-center items-center gap-10 px-[clamp(20px,4vw,48px)] pt-28 pb-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-8 lg:pt-32">
         <div className="min-w-0">
-          <div className="anim-rev mb-6 sm:mb-8" style={d(600)}>
-            <p className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[0.03] py-1.5 pr-3.5 pl-3 font-mono text-[11px] leading-none tracking-[0.14em] text-fg-muted uppercase">
-              <span className="relative flex size-1.5">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#9db0ff] opacity-60 motion-reduce:hidden" />
-                <span className="relative inline-flex size-1.5 rounded-full bg-[#9db0ff]" />
-              </span>
-              Ascendry Labs · Our own products
-            </p>
-          </div>
-
           <h1 className="font-display text-[clamp(44px,13vw,64px)] leading-[0.96] font-normal tracking-[-0.02em] sm:text-[clamp(64px,9vw,88px)] lg:text-[clamp(60px,6.2vw,96px)]">
             {words.map(({ w, italic }, i) => (
               <span
@@ -77,16 +73,15 @@ export function LabsHero() {
           </h1>
 
           <p
-            className="anim-rev mt-6 max-w-[44ch] text-[17px] leading-[1.6] text-fg-muted [text-wrap:pretty] sm:mt-8 sm:text-[19px]"
+            className="anim-rev mt-7 max-w-[46ch] text-[17px] leading-[1.65] text-fg-muted [text-wrap:pretty] sm:mt-9 sm:text-[19px]"
             style={d(1100)}
           >
-            Ascendry Labs is where our own startup ideas get built and
-            launched — designed, shipped and improved in the open, one product
-            at a time.
+            Our own startup ideas, built and launched in the open — one
+            product at a time.
           </p>
 
           <div
-            className="anim-rev mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row"
+            className="anim-rev mt-9 flex flex-col gap-3 sm:mt-11 sm:flex-row"
             style={d(1200)}
           >
             <MagneticButton href="#lab" className="!h-12 justify-center sm:!h-11">
@@ -97,9 +92,40 @@ export function LabsHero() {
             </Button>
           </div>
 
-          <p
-            className="anim-rev mt-8 text-sm leading-[1.6] text-fg-subtle sm:mt-10"
+          {/* Three stages, matching the wireframe / glass / chrome pieces on the right */}
+          <ol
+            className="anim-rev mt-12 grid max-w-[520px] grid-cols-3 gap-0 border-t border-line pt-6 sm:mt-14"
             style={d(1300)}
+            aria-label="How a Labs product is made"
+          >
+            {stages.map((st, i) => (
+              <li key={st.name} className="relative pr-4">
+                <span className="flex items-center gap-2.5">
+                  <span
+                    aria-hidden="true"
+                    className={`size-2 rounded-full border ${
+                      i === 2 ? "border-fg bg-fg" : i === 1 ? "border-fg-muted bg-fg-muted/40" : "border-fg-subtle"
+                    }`}
+                  />
+                  <span
+                    aria-hidden="true"
+                    className={`h-px flex-1 ${i === 2 ? "bg-transparent" : "bg-line-strong"}`}
+                  />
+                </span>
+                <span className="mt-3 block font-mono text-[10px] tracking-[0.18em] text-fg-subtle uppercase">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="mt-1 block text-[15px] text-fg">{st.name}</span>
+                <span className="mt-0.5 block text-[13px] leading-[1.5] text-fg-subtle">
+                  {st.note}
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          <p
+            className="anim-rev mt-8 text-sm leading-[1.6] text-fg-subtle"
+            style={d(1400)}
           >
             Looking for client work?{" "}
             <Link

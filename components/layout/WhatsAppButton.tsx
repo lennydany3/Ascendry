@@ -1,7 +1,9 @@
+import { SITE } from "@/lib/site";
+
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/91XXXXXXXXXX"
+      href={SITE.whatsapp}
       aria-label="Chat on WhatsApp"
       className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors duration-150 hover:border-line-strong hover:bg-surface-hover"
     >

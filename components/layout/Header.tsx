@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { Logo, LogoMark } from "@/components/ui/Logo";
+import { SITE } from "@/lib/site";
 
-export type Brand = "studio" | "labs";
+export type Brand = "studio" | "labs" | "legal";
 
 const config = {
   studio: {
@@ -16,6 +18,7 @@ const config = {
       { label: "About", href: "#about" },
     ],
     cta: "Get a quote",
+    ctaHref: "#contact",
   },
   labs: {
     home: "/labs",
@@ -26,6 +29,18 @@ const config = {
       { label: "Principles", href: "#principles" },
     ],
     cta: "Get in touch",
+    ctaHref: "#contact",
+  },
+  legal: {
+    home: "/",
+    tag: "Legal",
+    links: [
+      { label: "Privacy", href: "/legal/privacy-policy" },
+      { label: "Terms", href: "/legal/terms-and-conditions" },
+      { label: "Refunds", href: "/legal/refund-cancellation" },
+    ],
+    cta: "Get a quote",
+    ctaHref: "/#contact",
   },
 } as const;
 
@@ -82,8 +97,9 @@ function Arrow() {
 }
 
 export function Header({ brand = "studio" }: { brand?: Brand }) {
-  const { links, cta, tag, home } = config[brand];
-  const mobileLinks = [...links, { label: "Contact", href: "#contact" }];
+  const { links, cta, ctaHref, tag, home } = config[brand];
+  const pathname = usePathname();
+  const mobileLinks = [...links, { label: "Contact", href: ctaHref }];
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
@@ -121,7 +137,7 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
 
   // Scroll-spy: highlight the nav link of the section crossing the viewport middle.
   useEffect(() => {
-    const ids = [...config[brand].links.map((l) => l.href.slice(1)), "contact"];
+    const ids = brand === "legal" ? [] : [...config[brand].links.map((l) => l.href.slice(1)), "contact"];
     const els = ids
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el);
@@ -172,7 +188,7 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
               className="hidden items-center gap-1 rounded-full border border-white/15 bg-white/[0.05] p-1 md:flex"
             >
               {links.map((l) => {
-                const on = active === l.href.slice(1);
+                const on = brand === "legal" ? pathname === l.href : active === l.href.slice(1);
                 return (
                   <Link
                     key={l.label}
@@ -193,7 +209,7 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
             <div className="flex items-center gap-3 justify-self-end">
               <BrandSwitch brand={brand} className="hidden lg:flex" />
               <Link
-                href="#contact"
+                href={ctaHref}
                 className="group hidden h-10 items-center gap-2 rounded-lg bg-fg px-4 text-sm font-medium text-bg transition-colors duration-150 hover:bg-[#e5e5e5] md:inline-flex"
               >
                 {cta}
@@ -301,7 +317,7 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
             style={{ "--i": 5 } as CSSProperties}
           >
             <Link
-              href="#contact"
+              href={ctaHref}
               onClick={close}
               className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-fg text-sm font-medium text-bg"
             >
@@ -309,10 +325,10 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
               <Arrow />
             </Link>
             <a
-              href="mailto:hello@ascendry.in"
+              href={`mailto:${SITE.email}`}
               className="text-center text-sm text-fg-subtle"
             >
-              hello@ascendry.in
+              {SITE.email}
             </a>
           </div>
         </div>

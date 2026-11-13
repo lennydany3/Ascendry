@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SITE } from "@/lib/site";
 
 const lab = [
   {
@@ -138,11 +139,11 @@ export function LabsSections() {
               lead="Collaborations, feedback or early-access interest — we'd love to hear from you."
             />
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="mailto:hello@ascendry.in" variant="inverted">
+              <Button href={`mailto:${SITE.email}`} variant="inverted">
                 Email the lab
               </Button>
               <Button
-                href="https://wa.me/91XXXXXXXXXX"
+                href={SITE.whatsapp}
                 className="!border-black/20 !text-invert-fg hover:!bg-black/5"
               >
                 Chat on WhatsApp

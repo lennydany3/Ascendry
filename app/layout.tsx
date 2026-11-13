@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { IntroLoader } from "@/components/loader/IntroLoader";
+import { CookieConsent } from "@/components/legal/CookieConsent";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen bg-bg text-fg-muted">
         <IntroLoader />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
