@@ -157,7 +157,30 @@ h3 {
   filter: none;
 }
 
+/* ---------- Intro loaders ---------- */
+
+html[data-intro-seen] .intro-cover,
+html[data-labs-seen] .labs-cover {
+  display: none;
+}
+@keyframes intro-reveal {
+  from { transform: scale(1.04); opacity: 0.6; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes labs-reveal {
+  from { transform: translateY(12px); opacity: 0.7; }
+  to { transform: none; opacity: 1; }
+}
+html[data-intro-reveal] main {
+  animation: intro-reveal 800ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+html[data-labs-reveal] main {
+  animation: labs-reveal 550ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html[data-intro-reveal] main,
+  html[data-labs-reveal] main { animation: none; }
   html { scroll-behavior: auto; }
   .anim-word { transform: none; animation: fade-in 400ms both; animation-delay: calc(100ms + var(--i, 0) * 60ms); }
   .anim-rev { animation: fade-in 400ms both; animation-delay: calc(var(--d, 0ms) * 0.2); }

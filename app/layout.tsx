@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { IntroLoader } from "@/components/loader/IntroLoader";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -35,8 +36,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${instrumentSerif.variable} ${inter.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen bg-bg text-fg-muted">{children}</body>
+      <head>
+        {/* Hide the loader covers before first paint on repeat visits. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var s=sessionStorage,e=document.documentElement;if(s.getItem("ascendry-intro-seen"))e.setAttribute("data-intro-seen","");if(s.getItem("ascendry-labs-intro-seen"))e.setAttribute("data-labs-seen","")}catch(_){}',
+          }}
+        />
+      </head>
+      <body className="min-h-screen bg-bg text-fg-muted">
+        <IntroLoader />
+        {children}
+      </body>
     </html>
   );
 }

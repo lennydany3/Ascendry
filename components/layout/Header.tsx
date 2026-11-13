@@ -44,6 +44,8 @@ function BrandSwitch({ brand, className = "" }: { brand: Brand; className?: stri
           onClick={() => {
             try {
               sessionStorage.setItem("brand-switch", "1");
+              // Tells the destination which loader variant to play.
+              if (b !== brand) sessionStorage.setItem("ascendry-toggle-to", b);
             } catch {}
           }}
           aria-current={b === brand ? "page" : undefined}
