@@ -5,7 +5,7 @@ export function WhatsAppButton() {
     <a
       href={SITE.whatsapp}
       aria-label="Chat on WhatsApp"
-      className="fixed right-6 bottom-6 z-40 flex size-12 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors duration-150 hover:border-line-strong hover:bg-surface-hover"
+      className="fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] sm:right-6 sm:bottom-6 z-40 flex size-12 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors duration-150 hover:border-line-strong hover:bg-surface-hover"
     >
       <svg
         width="20"

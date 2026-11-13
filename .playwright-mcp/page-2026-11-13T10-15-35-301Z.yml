@@ -1,0 +1,210 @@
+- generic [active] [ref=f7e1]:
+  - link "Skip to content" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f7e3]:
+    - generic [ref=f7e5]:
+      - link "Ascendry home" [ref=f7e7] [cursor=pointer]:
+        - /url: /labs
+        - generic [ref=f7e13]: ASCENDRY
+        - generic [ref=f7e14]: Labs
+      - button "Open menu" [ref=f7e16] [cursor=pointer]
+  - main [ref=f7e18]:
+    - region "Introduction" [ref=f7e19]:
+      - generic [ref=f7e20]:
+        - generic [ref=f7e21]:
+          - heading "Ideas that become products." [level=1] [ref=f7e22]:
+            - generic [ref=f7e23]: Ideas
+            - generic [ref=f7e25]: that
+            - generic [ref=f7e27]: become
+            - generic [ref=f7e29]: products.
+          - paragraph [ref=f7e31]: Our own startup ideas, built and launched in the open — one product at a time.
+          - generic [ref=f7e32]:
+            - link "See the lab" [ref=f7e33] [cursor=pointer]:
+              - /url: "#lab"
+              - text: See the lab
+              - generic [aria-hidden] [ref=f7e34]: →
+            - link "Get in touch" [ref=f7e35] [cursor=pointer]:
+              - /url: "#contact"
+          - generic [ref=f7e36]:
+            - generic [ref=f7e37]:
+              - term [ref=f7e38]: Built
+              - definition [ref=f7e39]: In-house
+            - generic [ref=f7e40]:
+              - term [ref=f7e41]: Shipped
+              - definition [ref=f7e42]: In the open
+            - generic [ref=f7e43]:
+              - term [ref=f7e44]: Based in
+              - definition [ref=f7e45]: Chennai, IN
+          - paragraph [ref=f7e46]:
+            - text: Looking for client work?
+            - link "Visit Ascendry Studio →" [ref=f7e47] [cursor=pointer]:
+              - /url: /
+        - 'img "The Ascendry A shown as an exploded assembly: a wireframe crossbar (idea), a glass left leg (prototype) and a finished chrome right leg (launch)." [ref=f7e49]'
+    - generic [ref=f7e51]:
+      - generic [ref=f7e53]:
+        - paragraph [ref=f7e54]: — 01 / The lab
+        - heading [level=2] [ref=f7e55]:
+          - text: What we're
+          - emphasis [ref=f7e56]: building
+          - text: .
+        - paragraph [ref=f7e57]: Products are announced when they launch. Until then, this is what moves through the lab.
+      - list [ref=f7e59]:
+        - listitem [ref=f7e61]:
+          - generic [ref=f7e62]: Stage 01
+          - article [ref=f7e66]:
+            - generic [aria-hidden]: "01"
+            - generic [ref=f7e67]:
+              - generic [ref=f7e68]: Researching
+              - generic [ref=f7e70]: 1/3
+            - heading "Next idea" [level=3] [ref=f7e71]
+            - paragraph [ref=f7e72]: Problems worth solving, validated with real people before a line of code is written.
+        - listitem [ref=f7e78]:
+          - generic [ref=f7e79]: Stage 02
+          - article [ref=f7e84]:
+            - generic [aria-hidden]: "02"
+            - generic [ref=f7e85]:
+              - generic [ref=f7e86]: Building
+              - generic [ref=f7e88]: 2/3
+            - heading "In progress" [level=3] [ref=f7e89]
+            - paragraph [ref=f7e90]: Small, focused prototypes shipped fast so we learn from real use, not guesses.
+        - listitem [ref=f7e96]:
+          - generic [ref=f7e97]: Stage 03
+          - article [ref=f7e101]:
+            - generic [aria-hidden]: "03"
+            - generic [ref=f7e102]:
+              - generic [ref=f7e103]: Launching
+              - generic [ref=f7e105]: 3/3
+            - heading "First launch" [level=3] [ref=f7e106]
+            - paragraph [ref=f7e107]: Our first product is on the way. Products are announced here the moment they go live.
+    - generic [ref=f7e113]:
+      - generic [ref=f7e115]:
+        - paragraph [ref=f7e116]: — 02 / Approach
+        - heading [level=2] [ref=f7e117]:
+          - text: From idea to
+          - emphasis [ref=f7e118]: launch
+          - text: .
+        - paragraph [ref=f7e119]: A simple loop we repeat for every product.
+      - generic [ref=f7e120]:
+        - list [ref=f7e121]:
+          - listitem [ref=f7e123]:
+            - generic [ref=f7e124]: "01"
+            - generic [ref=f7e125]:
+              - heading "Spot the problem" [level=3] [ref=f7e126]
+              - paragraph [ref=f7e127]: Start from something people genuinely struggle with.
+          - listitem [ref=f7e129]:
+            - generic [ref=f7e130]: "02"
+            - generic [ref=f7e131]:
+              - heading "Prototype fast" [level=3] [ref=f7e132]
+              - paragraph [ref=f7e133]: A working version in weeks, not months.
+          - listitem [ref=f7e135]:
+            - generic [ref=f7e136]: "03"
+            - generic [ref=f7e137]:
+              - heading "Launch early" [level=3] [ref=f7e138]
+              - paragraph [ref=f7e139]: Put it in front of real users and listen.
+          - listitem [ref=f7e141]:
+            - generic [ref=f7e142]: "04"
+            - generic [ref=f7e143]:
+              - heading "Improve or retire" [level=3] [ref=f7e144]
+              - paragraph [ref=f7e145]: Double down on what works. Stop what doesn't.
+        - paragraph [ref=f7e146]:
+          - generic [aria-hidden] [ref=f7e147]: ↻
+          - text: Then we loop, with the next idea
+    - generic [ref=f7e149]:
+      - generic [ref=f7e151]:
+        - paragraph [ref=f7e152]: — 03 / Principles
+        - heading [level=2] [ref=f7e153]:
+          - text: How the lab
+          - emphasis [ref=f7e154]: works
+          - text: .
+      - list [ref=f7e155]:
+        - listitem [ref=f7e157]:
+          - generic [ref=f7e158]: "01"
+          - heading "Built in the open" [level=3] [ref=f7e159]
+          - paragraph [ref=f7e160]: We share what we ship and what we learn.
+        - listitem [ref=f7e162]:
+          - generic [ref=f7e163]: "02"
+          - heading "Small and sharp" [level=3] [ref=f7e164]
+          - paragraph [ref=f7e165]: One problem, done well, beats ten features done halfway.
+        - listitem [ref=f7e167]:
+          - generic [ref=f7e168]: "03"
+          - heading "Studio-grade craft" [level=3] [ref=f7e169]
+          - paragraph [ref=f7e170]: Products get the same design and engineering standards as client work.
+    - generic [ref=f7e173]:
+      - generic [ref=f7e174]:
+        - generic [ref=f7e175]:
+          - paragraph [ref=f7e176]: — 04 / Contact
+          - heading [level=2] [ref=f7e177]:
+            - text: Got an idea worth
+            - emphasis [ref=f7e178]: launching
+            - text: "?"
+          - paragraph [ref=f7e179]: Collaborations, feedback or early-access interest — we'd love to hear from you.
+        - generic [ref=f7e180]:
+          - link "Chat on WhatsApp" [ref=f7e181] [cursor=pointer]:
+            - /url: https://wa.me/919043556745
+          - link "lennydany3@gmail.com" [ref=f7e186] [cursor=pointer]:
+            - /url: mailto:lennydany3@gmail.com
+      - list [ref=f7e191]:
+        - listitem [ref=f7e192]:
+          - generic [ref=f7e193]: "01"
+          - generic [ref=f7e194]:
+            - heading "Share your idea" [level=3] [ref=f7e195]
+            - paragraph [ref=f7e196]: A quick message on WhatsApp or email is enough.
+        - listitem [ref=f7e197]:
+          - generic [ref=f7e198]: "02"
+          - generic [ref=f7e199]:
+            - heading "We talk it through" [level=3] [ref=f7e200]
+            - paragraph [ref=f7e201]: Usually within a day, with no jargon.
+        - listitem [ref=f7e202]:
+          - generic [ref=f7e203]: "03"
+          - generic [ref=f7e204]:
+            - heading "Build it together" [level=3] [ref=f7e205]
+            - paragraph [ref=f7e206]: Collaborate, give feedback or join early access.
+  - contentinfo [ref=f7e207]:
+    - generic [ref=f7e208]:
+      - generic [ref=f7e209]:
+        - generic [ref=f7e210]:
+          - link "Ascendry home" [ref=f7e211] [cursor=pointer]:
+            - /url: /labs
+            - generic [ref=f7e217]: ASCENDRY
+            - generic [ref=f7e218]: Labs
+          - paragraph [ref=f7e219]: Our own startup ideas, built and launched in the open by Ascendry.
+        - generic [ref=f7e220]:
+          - paragraph [ref=f7e221]: Pages
+          - link "Lab" [ref=f7e222] [cursor=pointer]:
+            - /url: /labs#lab
+          - link "Approach" [ref=f7e223] [cursor=pointer]:
+            - /url: /labs#approach
+          - link "Principles" [ref=f7e224] [cursor=pointer]:
+            - /url: /labs#principles
+          - link "Products" [ref=f7e225] [cursor=pointer]:
+            - /url: /labs/products
+          - link "Contact" [ref=f7e226] [cursor=pointer]:
+            - /url: /labs#contact
+          - link "Ascendry Studio" [ref=f7e227] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f7e228]:
+          - paragraph [ref=f7e229]: Legal
+          - link "Privacy policy" [ref=f7e230] [cursor=pointer]:
+            - /url: /legal/privacy-policy
+          - link "Terms & conditions" [ref=f7e231] [cursor=pointer]:
+            - /url: /legal/terms-and-conditions
+          - link "Refund & cancellation" [ref=f7e232] [cursor=pointer]:
+            - /url: /legal/refund-cancellation
+          - button "Cookie settings" [ref=f7e233] [cursor=pointer]
+        - generic [ref=f7e234]:
+          - paragraph [ref=f7e235]: Contact
+          - link "lennydany3@gmail.com" [ref=f7e236] [cursor=pointer]:
+            - /url: mailto:lennydany3@gmail.com
+          - link "+91 90435 56745" [ref=f7e240] [cursor=pointer]:
+            - /url: tel:+919043556745
+          - generic [ref=f7e243]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+      - generic [ref=f7e247]:
+        - generic [ref=f7e248]: © 2026 Ascendry · Chennai, India
+        - generic [ref=f7e249]: Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
+        - link "Back to top" [ref=f7e250] [cursor=pointer]:
+          - /url: "#main"
+    - generic [aria-hidden] [ref=f7e254]: ASCENDRY
+  - link "Chat on WhatsApp" [ref=f7e255] [cursor=pointer]:
+    - /url: https://wa.me/919043556745
+  - button "Open Next.js Dev Tools" [ref=f7e263] [cursor=pointer]
+  - alert [ref=f7e267]

@@ -41,7 +41,7 @@ const legal = [
 ];
 
 const linkCls =
-  "text-sm text-fg-muted transition-colors duration-150 hover:text-fg";
+  "py-2 text-sm text-fg-muted transition-colors duration-150 hover:text-fg md:py-0";
 
 export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }) {
   const year = await getYear();
@@ -72,7 +72,7 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
           </div>
 
           <div className="flex flex-[1_1_140px] flex-col gap-3.5">
-            <Eyebrow className="mb-1.5">Pages</Eyebrow>
+            <Eyebrow className="mb-2.5 md:mb-1.5">Pages</Eyebrow>
             {pages[brand].map((p) => (
               <Link key={p.label} href={p.href} className={linkCls}>
                 {p.label}
@@ -81,7 +81,7 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
           </div>
 
           <div className="flex flex-[1_1_160px] flex-col gap-3.5">
-            <Eyebrow className="mb-1.5">Legal</Eyebrow>
+            <Eyebrow className="mb-2.5 md:mb-1.5">Legal</Eyebrow>
             {legal.map((l) => (
               <Link key={l.href} href={l.href} className={linkCls}>
                 {l.label}
@@ -91,7 +91,7 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
           </div>
 
           <div className="flex flex-[1_1_240px] flex-col gap-3.5">
-            <Eyebrow className="mb-1.5">Contact</Eyebrow>
+            <Eyebrow className="mb-2.5 md:mb-1.5">Contact</Eyebrow>
             <a href={`mailto:${SITE.email}`} className={`${linkCls} flex items-center gap-2.5`}>
               <MailIcon width={16} height={16} className="shrink-0 text-fg-subtle" />
               {SITE.email}
@@ -117,7 +117,7 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
             className="group inline-flex items-center gap-2 text-fg-muted transition-colors hover:text-fg"
           >
             Back to top
-            <span className="flex size-8 items-center justify-center rounded-full border border-line-strong transition-colors group-hover:bg-white/[0.06]">
+            <span className="flex size-11 items-center justify-center rounded-full md:size-8 border border-line-strong transition-colors group-hover:bg-white/[0.06]">
               <ArrowUpIcon width={14} height={14} />
             </span>
           </Link>
