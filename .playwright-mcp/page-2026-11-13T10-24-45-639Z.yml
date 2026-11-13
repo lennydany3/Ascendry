@@ -1,0 +1,352 @@
+- generic [active] [ref=e1]:
+  - status [ref=e2]:
+    - generic [ref=e3]: Loading Ascendry Studio
+    - generic [ref=e5]:
+      - paragraph [ref=e7]: ASCENDRY — STUDIO
+      - generic [aria-hidden] [ref=e48]: CHENNAI → WORLDWIDE
+      - generic [aria-hidden] [ref=e49]: "001"
+  - link "Skip to content" [ref=e50] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e51]:
+    - generic [ref=e53]:
+      - link "Ascendry home" [ref=e55] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e61]: ASCENDRY
+        - generic [ref=e62]: Studio
+      - navigation "Primary" [ref=e63]:
+        - link "Work" [ref=e64] [cursor=pointer]:
+          - /url: "#work"
+        - link "Services" [ref=e65] [cursor=pointer]:
+          - /url: "#services"
+        - link "About" [ref=e66] [cursor=pointer]:
+          - /url: "#about"
+      - link "Get a quote" [ref=e68] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=e71]:
+    - region "Introduction" [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - heading "Somewhere, something got easier." [level=1] [ref=e75]:
+            - generic [ref=e76]: Somewhere,
+            - generic [ref=e78]: something
+            - generic [ref=e80]: got
+            - generic [ref=e82]: easier.
+          - paragraph [ref=e84]: We probably built it.
+          - generic [ref=e85]:
+            - link "See what we built" [ref=e86] [cursor=pointer]:
+              - /url: "#work"
+              - text: See what we built
+              - generic [aria-hidden] [ref=e87]: →
+            - link "Get in touch" [ref=e88] [cursor=pointer]:
+              - /url: "#contact"
+          - list [ref=e89]:
+            - listitem [ref=e90]: Built fast
+            - listitem [ref=e93]: Built right
+            - listitem [ref=e96]: Built once
+        - generic [ref=e100]:
+          - generic [ref=e101]: Fig. 01
+          - generic [ref=e102]: The Ascent mark
+      - group "What we build" [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - generic [ref=e115]: 01 Booking engines
+            - generic [aria-hidden] [ref=e116]: ·
+          - generic [ref=e117]:
+            - generic [ref=e118]: 02 Payment flows
+            - generic [aria-hidden] [ref=e119]: ·
+          - generic [ref=e120]:
+            - generic [ref=e121]: 03 WhatsApp automation
+            - generic [aria-hidden] [ref=e122]: ·
+          - generic [ref=e123]:
+            - generic [ref=e124]: 04 Admin dashboards
+            - generic [aria-hidden] [ref=e125]: ·
+          - generic [ref=e126]:
+            - generic [ref=e127]: 05 Customer portals
+            - generic [aria-hidden] [ref=e128]: ·
+          - generic [ref=e129]:
+            - generic [ref=e130]: 06 Inventory systems
+            - generic [aria-hidden] [ref=e131]: ·
+          - generic [ref=e132]:
+            - generic [ref=e133]: 07 Loyalty programs
+            - generic [aria-hidden] [ref=e134]: ·
+          - generic [ref=e135]:
+            - generic [ref=e136]: 08 Custom APIs
+            - generic [aria-hidden] [ref=e137]: ·
+          - generic [ref=e138]:
+            - generic [ref=e139]: 09 AI workflows
+            - generic [aria-hidden] [ref=e140]: ·
+          - generic [ref=e141]:
+            - generic [ref=e142]: 10 Analytics
+            - generic [aria-hidden] [ref=e143]: ·
+        - generic [aria-hidden] [ref=e144]:
+          - generic [ref=e145]:
+            - generic [ref=e146]: 01 Booking engines
+            - generic [aria-hidden] [ref=e147]: ·
+          - generic [ref=e148]:
+            - generic [ref=e149]: 02 Payment flows
+            - generic [aria-hidden] [ref=e150]: ·
+          - generic [ref=e151]:
+            - generic [ref=e152]: 03 WhatsApp automation
+            - generic [aria-hidden] [ref=e153]: ·
+          - generic [ref=e154]:
+            - generic [ref=e155]: 04 Admin dashboards
+            - generic [aria-hidden] [ref=e156]: ·
+          - generic [ref=e157]:
+            - generic [ref=e158]: 05 Customer portals
+            - generic [aria-hidden] [ref=e159]: ·
+          - generic [ref=e160]:
+            - generic [ref=e161]: 06 Inventory systems
+            - generic [aria-hidden] [ref=e162]: ·
+          - generic [ref=e163]:
+            - generic [ref=e164]: 07 Loyalty programs
+            - generic [aria-hidden] [ref=e165]: ·
+          - generic [ref=e166]:
+            - generic [ref=e167]: 08 Custom APIs
+            - generic [aria-hidden] [ref=e168]: ·
+          - generic [ref=e169]:
+            - generic [ref=e170]: 09 AI workflows
+            - generic [aria-hidden] [ref=e171]: ·
+          - generic [ref=e172]:
+            - generic [ref=e173]: 10 Analytics
+            - generic [aria-hidden] [ref=e174]: ·
+    - generic [ref=e176]:
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: — 01 / Selected work
+          - heading [level=2] [ref=e181]:
+            - text: Built for
+            - emphasis [ref=e182]: real
+            - text: businesses.
+          - paragraph [ref=e183]: Nine demo sites across nine industries. Each one is a working starting point for your own.
+        - paragraph [ref=e184]: 09 demo sites09 industries
+      - generic [ref=e185]:
+        - article [ref=e187]:
+          - generic [ref=e188]:
+            - generic [ref=e189]: bean-and-brew
+            - generic [ref=e227]:
+              - generic [ref=e228]: Coffee cafe
+              - generic [ref=e230]: "01"
+            - heading "Bean and Brew" [level=3] [ref=e231]
+            - paragraph [ref=e232]: Menu, orders and table bookings for a neighbourhood cafe.
+        - article [ref=e234]:
+          - generic [ref=e235]:
+            - generic [ref=e236]: respawn-arena
+            - generic [ref=e274]:
+              - generic [ref=e275]: Gaming cafe
+              - generic [ref=e277]: "02"
+            - heading "Respawn Arena" [level=3] [ref=e278]
+            - paragraph [ref=e279]: Seat booking and tournament sign-ups.
+        - article [ref=e281]:
+          - generic [ref=e282]:
+            - generic [ref=e283]: ironcore
+            - generic [ref=e321]:
+              - generic [ref=e322]: Gym
+              - generic [ref=e324]: "03"
+            - heading "IronCore" [level=3] [ref=e325]
+            - paragraph [ref=e326]: Memberships, class schedules and trial passes.
+        - article [ref=e328]:
+          - generic [ref=e329]:
+            - generic [ref=e330]: threadline
+            - generic [ref=e368]:
+              - generic [ref=e369]: Clothing
+              - generic [ref=e371]: "04"
+            - heading "Threadline" [level=3] [ref=e372]
+            - paragraph [ref=e373]: A clean storefront for a fashion label.
+        - article [ref=e375]:
+          - generic [ref=e376]:
+            - generic [ref=e377]: coastline-stays
+            - generic [ref=e415]:
+              - generic [ref=e416]: Stays
+              - generic [ref=e418]: "05"
+            - heading "Coastline Stays" [level=3] [ref=e419]
+            - paragraph [ref=e420]: Rooms, rates and direct booking enquiries.
+        - article [ref=e422]:
+          - generic [ref=e423]:
+            - generic [ref=e424]: saffron-table
+            - generic [ref=e462]:
+              - generic [ref=e463]: Restaurant
+              - generic [ref=e465]: "06"
+            - heading "Saffron Table" [level=3] [ref=e466]
+            - paragraph [ref=e467]: Menus, reservations and WhatsApp ordering.
+        - article [ref=e469]:
+          - generic [ref=e470]:
+            - generic [ref=e471]: luxe-studio
+            - generic [ref=e509]:
+              - generic [ref=e510]: Salon & spa
+              - generic [ref=e512]: "07"
+            - heading "Luxe Studio" [level=3] [ref=e513]
+            - paragraph [ref=e514]: Services, stylists and online appointments.
+        - article [ref=e516]:
+          - generic [ref=e517]:
+            - generic [ref=e518]: apex-academy
+            - generic [ref=e556]:
+              - generic [ref=e557]: Coaching
+              - generic [ref=e559]: "08"
+            - heading "Apex Academy" [level=3] [ref=e560]
+            - paragraph [ref=e561]: Courses, batches and enrolment forms.
+        - article [ref=e563]:
+          - generic [ref=e564]:
+            - generic [ref=e565]: crumb-and-co
+            - generic [ref=e603]:
+              - generic [ref=e604]: Bakery
+              - generic [ref=e606]: "09"
+            - heading "Crumb and Co" [level=3] [ref=e607]
+            - paragraph [ref=e608]: Cake catalogue with custom order requests.
+      - generic [ref=e610]:
+        - paragraph [ref=e611]:
+          - text: Your business could be
+          - emphasis [ref=e612]: next
+          - text: .
+        - link "Get a quote" [ref=e613] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e615]:
+      - generic [ref=e617]:
+        - paragraph [ref=e618]: — 02 / Services
+        - heading [level=2] [ref=e619]:
+          - text: Get bookings while you
+          - emphasis [ref=e620]: sleep
+          - text: .
+        - paragraph [ref=e621]: Everything a growing business needs online, built and handled by one small team.
+      - generic [ref=e622]:
+        - article [ref=e624]:
+          - generic [ref=e654]:
+            - generic [ref=e655]: "01"
+            - heading "Websites" [level=3] [ref=e656]
+            - paragraph [ref=e657]: Fast, sharp sites that look the part and turn visitors into enquiries.
+            - list [ref=e658]:
+              - listitem [ref=e659]: Designed mobile-first
+              - listitem [ref=e662]: Quick to load, easy to find
+              - listitem [ref=e665]: Clear calls to action
+        - article [ref=e669]:
+          - generic [ref=e672]: Booked · 7:30 pm
+          - generic [ref=e706]:
+            - generic [ref=e707]: "02"
+            - heading "Booking systems" [level=3] [ref=e708]
+            - paragraph [ref=e709]: Let customers book tables, seats, classes or appointments any time of day.
+            - list [ref=e710]:
+              - listitem [ref=e711]: Tables, seats, classes, appointments
+              - listitem [ref=e714]: Live availability
+              - listitem [ref=e717]: Works while you sleep
+        - article [ref=e721]:
+          - generic [ref=e726]:
+            - generic [ref=e728]: New booking
+            - generic [ref=e733]: WhatsApp confirmation
+            - generic [ref=e738]: Reminder · 2h before
+          - generic [ref=e742]:
+            - generic [ref=e743]: "03"
+            - heading "Automation" [level=3] [ref=e744]
+            - paragraph [ref=e745]: Confirmations, reminders and follow-ups that run without you lifting a finger.
+            - list [ref=e746]:
+              - listitem [ref=e747]: Instant confirmations
+              - listitem [ref=e750]: Automatic reminders
+              - listitem [ref=e753]: Follow-ups that bring people back
+    - generic [ref=e757]:
+      - generic [ref=e758]:
+        - generic [ref=e760]:
+          - paragraph [ref=e761]: — 03 / About
+          - heading [level=2] [ref=e762]:
+            - text: A small team that
+            - emphasis [ref=e763]: cares
+            - text: .
+        - generic [ref=e765]:
+          - paragraph [ref=e766]: We're a team of 5 to 10 designers, developers and automation builders in Chennai, working with small and growing businesses in India and the US.
+          - paragraph [ref=e767]: Small enough that you always know who's working on your project. Big enough to build the website, the booking system and the automation behind it, all in one place, so your business keeps moving while you focus on your customers.
+      - generic [ref=e768]:
+        - generic [ref=e770]:
+          - text: "01"
+          - heading "You talk to the builders" [level=3] [ref=e771]
+          - paragraph [ref=e772]: No account managers in between. The people designing and coding your site are the ones on the call.
+        - generic [ref=e774]:
+          - text: "02"
+          - heading "Design and code, side by side" [level=3] [ref=e775]
+          - paragraph [ref=e776]: Designers and developers work as one group, so what gets designed is what gets built.
+        - generic [ref=e778]:
+          - text: "03"
+          - heading "One team, start to finish" [level=3] [ref=e779]
+          - paragraph [ref=e780]: The same people handle the website, the booking system and the automation behind it.
+      - generic [ref=e782]:
+        - generic [ref=e783]:
+          - term [ref=e784]: Team
+          - definition [ref=e785]: 5–10 people
+        - generic [ref=e786]:
+          - term [ref=e787]: Based in
+          - definition [ref=e788]: Chennai, India
+        - generic [ref=e789]:
+          - term [ref=e790]: Clients in
+          - definition [ref=e791]: India & the US
+    - generic [ref=e794]:
+      - generic [ref=e795]:
+        - generic [ref=e796]:
+          - paragraph [ref=e797]: — 04 / Contact
+          - heading [level=2] [ref=e798]:
+            - text: Ready to
+            - emphasis [ref=e799]: grow
+            - text: "?"
+          - paragraph [ref=e800]: Tell us about your business and get a clear quote, usually within a day.
+        - generic [ref=e801]:
+          - link "Chat on WhatsApp" [ref=e802] [cursor=pointer]:
+            - /url: https://wa.me/919043556745
+          - link "lennydany3@gmail.com" [ref=e807] [cursor=pointer]:
+            - /url: mailto:lennydany3@gmail.com
+      - list [ref=e812]:
+        - listitem [ref=e813]:
+          - generic [ref=e814]: "01"
+          - generic [ref=e815]:
+            - heading "Tell us about your business" [level=3] [ref=e816]
+            - paragraph [ref=e817]: A quick message on WhatsApp or email is enough.
+        - listitem [ref=e818]:
+          - generic [ref=e819]: "02"
+          - generic [ref=e820]:
+            - heading "Get a clear quote" [level=3] [ref=e821]
+            - paragraph [ref=e822]: Usually within a day, with no jargon.
+        - listitem [ref=e823]:
+          - generic [ref=e824]: "03"
+          - generic [ref=e825]:
+            - heading "We build and launch" [level=3] [ref=e826]
+            - paragraph [ref=e827]: You stay in the loop with the people doing the work.
+  - contentinfo [ref=e828]:
+    - generic [ref=e829]:
+      - generic [ref=e830]:
+        - generic [ref=e831]:
+          - link "Ascendry home" [ref=e832] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e838]: ASCENDRY
+            - generic [ref=e839]: Studio
+          - paragraph [ref=e840]: Websites, booking systems and automation for small and growing businesses in India and the US.
+        - generic [ref=e841]:
+          - paragraph [ref=e842]: Pages
+          - link "Work" [ref=e843] [cursor=pointer]:
+            - /url: /#work
+          - link "Services" [ref=e844] [cursor=pointer]:
+            - /url: /#services
+          - link "About" [ref=e845] [cursor=pointer]:
+            - /url: /#about
+          - link "Contact" [ref=e846] [cursor=pointer]:
+            - /url: /#contact
+          - link "Ascendry Labs" [ref=e847] [cursor=pointer]:
+            - /url: /labs
+        - generic [ref=e848]:
+          - paragraph [ref=e849]: Legal
+          - link "Privacy policy" [ref=e850] [cursor=pointer]:
+            - /url: /legal/privacy-policy
+          - link "Terms & conditions" [ref=e851] [cursor=pointer]:
+            - /url: /legal/terms-and-conditions
+          - link "Refund & cancellation" [ref=e852] [cursor=pointer]:
+            - /url: /legal/refund-cancellation
+          - button "Cookie settings" [ref=e853] [cursor=pointer]
+        - generic [ref=e854]:
+          - paragraph [ref=e855]: Contact
+          - link "lennydany3@gmail.com" [ref=e856] [cursor=pointer]:
+            - /url: mailto:lennydany3@gmail.com
+          - link "+91 90435 56745" [ref=e860] [cursor=pointer]:
+            - /url: tel:+919043556745
+          - generic [ref=e863]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+      - generic [ref=e867]:
+        - generic [ref=e868]: © 2026 Ascendry · Chennai, India
+        - generic [ref=e869]: Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
+        - link "Back to top" [ref=e870] [cursor=pointer]:
+          - /url: "#main"
+    - generic [aria-hidden] [ref=e874]: ASCENDRY
+  - link "Chat on WhatsApp" [ref=e875] [cursor=pointer]:
+    - /url: https://wa.me/919043556745
+  - alert [ref=e878]

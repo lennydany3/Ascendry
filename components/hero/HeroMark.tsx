@@ -75,7 +75,6 @@ export function HeroMark() {
     const use3D =
       window.innerWidth >= 768 &&
       !conn?.saveData &&
-      (navigator.hardwareConcurrency || 8) > 4 &&
       !reduced;
 
     if (use3D && mark3dModule) {
