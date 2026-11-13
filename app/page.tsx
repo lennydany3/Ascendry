@@ -20,7 +20,7 @@ export default function Home() {
         <About />
         <Contact />
       </main>
-      <Footer />
+      <Footer brand="studio" />
       <WhatsAppButton />
     </>
   );

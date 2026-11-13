@@ -40,7 +40,7 @@ export function Hero() {
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-success opacity-60 motion-reduce:hidden" />
                 <span className="relative inline-flex size-1.5 rounded-full bg-success" />
               </span>
-              Web studio · Chennai → Worldwide
+              Ascendry Studio · Client work
             </p>
           </div>
 

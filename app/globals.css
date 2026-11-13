@@ -120,6 +120,13 @@ h3 {
   animation: menu-link 600ms var(--ease-out) both;
   animation-delay: calc(80ms + var(--i, 0) * 60ms);
 }
+.labs-draw {
+  stroke-dashoffset: 1;
+  animation: labs-draw 1600ms 700ms var(--ease-out) forwards;
+}
+@keyframes labs-draw {
+  to { stroke-dashoffset: 0; }
+}
 .marquee-track {
   animation: marquee 48s linear infinite;
 }
@@ -157,6 +164,7 @@ h3 {
   .anim-fade { animation-duration: 400ms; }
   .anim-menu { animation: fade-in 400ms both; }
   .marquee-track { animation: none; }
+  .labs-draw { animation: none; stroke-dashoffset: 0; }
   .mark-piece { animation: none !important; }
   .reveal { transform: none; filter: none; transition: opacity 400ms; }
 }

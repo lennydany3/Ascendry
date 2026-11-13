@@ -19,7 +19,13 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
-export function Logo({ href = "/" }: { href?: string }) {
+export function Logo({
+  href = "/",
+  tag,
+}: {
+  href?: string;
+  tag?: string;
+}) {
   return (
     <Link
       href={href}
@@ -30,6 +36,11 @@ export function Logo({ href = "/" }: { href?: string }) {
       <span className="text-sm font-medium leading-none tracking-[0.2em]">
         ASCENDRY
       </span>
+      {tag ? (
+        <span className="ml-0.5 rounded-[4px] border border-line-strong px-1.5 py-[3px] font-mono text-[10px] leading-none tracking-[0.14em] text-fg-muted uppercase">
+          {tag}
+        </span>
+      ) : null}
     </Link>
   );
 }

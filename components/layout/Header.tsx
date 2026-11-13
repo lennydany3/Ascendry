@@ -4,13 +4,55 @@ import Link from "next/link";
 import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { Logo, LogoMark } from "@/components/ui/Logo";
 
-const links = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-];
+export type Brand = "studio" | "labs";
 
-const mobileLinks = [...links, { label: "Contact", href: "#contact" }];
+const config = {
+  studio: {
+    home: "/",
+    tag: "Studio",
+    links: [
+      { label: "Work", href: "#work" },
+      { label: "Services", href: "#services" },
+      { label: "About", href: "#about" },
+    ],
+    cta: "Get a quote",
+  },
+  labs: {
+    home: "/labs",
+    tag: "Labs",
+    links: [
+      { label: "Lab", href: "#lab" },
+      { label: "Approach", href: "#approach" },
+      { label: "Principles", href: "#principles" },
+    ],
+    cta: "Get in touch",
+  },
+} as const;
+
+function BrandSwitch({ brand, className = "" }: { brand: Brand; className?: string }) {
+  return (
+    <div
+      role="group"
+      aria-label="Switch between Ascendry Studio and Labs"
+      className={`items-center rounded-lg border border-line bg-white/[0.03] p-0.5 ${className}`}
+    >
+      {(["studio", "labs"] as const).map((b) => (
+        <Link
+          key={b}
+          href={config[b].home}
+          aria-current={b === brand ? "page" : undefined}
+          className={`rounded-md px-3 py-1.5 font-mono text-[11px] leading-none tracking-[0.12em] uppercase transition-colors duration-200 ${
+            b === brand
+              ? "bg-white/[0.1] text-fg"
+              : "text-fg-subtle hover:text-fg"
+          }`}
+        >
+          {config[b].tag}
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 function Arrow() {
   return (
@@ -31,7 +73,9 @@ function Arrow() {
   );
 }
 
-export function Header() {
+export function Header({ brand = "studio" }: { brand?: Brand }) {
+  const { links, cta, tag, home } = config[brand];
+  const mobileLinks = [...links, { label: "Contact", href: "#contact" }];
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
@@ -58,7 +102,7 @@ export function Header() {
 
   // Scroll-spy: highlight the nav link of the section crossing the viewport middle.
   useEffect(() => {
-    const ids = mobileLinks.map((l) => l.href.slice(1));
+    const ids = [...config[brand].links.map((l) => l.href.slice(1)), "contact"];
     const els = ids
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el);
@@ -74,7 +118,7 @@ export function Header() {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, []);
+  }, [brand]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -101,7 +145,7 @@ export function Header() {
             }`}
           >
             <div className="justify-self-start">
-              <Logo />
+              <Logo href={home} tag={tag} />
             </div>
 
             <nav
@@ -127,12 +171,13 @@ export function Header() {
               })}
             </nav>
 
-            <div className="flex items-center justify-self-end">
+            <div className="flex items-center gap-3 justify-self-end">
+              <BrandSwitch brand={brand} className="hidden lg:flex" />
               <Link
                 href="#contact"
                 className="group hidden h-10 items-center gap-2 rounded-lg bg-fg px-4 text-sm font-medium text-bg transition-colors duration-150 hover:bg-[#e5e5e5] md:inline-flex"
               >
-                Get a quote
+                {cta}
                 <Arrow />
               </Link>
               <button
@@ -203,9 +248,11 @@ export function Header() {
             </button>
           </div>
 
+          <BrandSwitch brand={brand} className="relative mt-6 flex w-fit" />
+
           <nav
             aria-label="Mobile"
-            className="relative mt-8 flex flex-col border-t border-line"
+            className="relative mt-4 flex flex-col border-t border-line"
           >
             {mobileLinks.map((l, i) => (
               <Link
@@ -239,7 +286,7 @@ export function Header() {
               onClick={close}
               className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-fg text-sm font-medium text-bg"
             >
-              Get a quote
+              {cta}
               <Arrow />
             </Link>
             <a

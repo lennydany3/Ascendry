@@ -8,18 +8,33 @@ async function getYear() {
   return new Date().getFullYear();
 }
 
-const pages = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+const pages = {
+  studio: [
+    { label: "Work", href: "#work" },
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+    { label: "Ascendry Labs", href: "/labs" },
+  ],
+  labs: [
+    { label: "Lab", href: "#lab" },
+    { label: "Approach", href: "#approach" },
+    { label: "Principles", href: "#principles" },
+    { label: "Contact", href: "#contact" },
+    { label: "Ascendry Studio", href: "/" },
+  ],
+};
+const blurb = {
+  studio:
+    "Websites, booking systems and automation for small and growing businesses in India and the US.",
+  labs: "Our own startup ideas, built and launched in the open by Ascendry.",
+};
 const legal = ["Privacy policy", "Terms & conditions", "Refund & cancellation"];
 
 const linkCls =
   "text-sm text-fg-muted transition-colors duration-150 hover:text-fg";
 
-export async function Footer() {
+export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }) {
   const year = await getYear();
 
   return (
@@ -27,16 +42,15 @@ export async function Footer() {
       <Container className="pt-24">
         <div className="flex flex-wrap gap-x-8 gap-y-12">
           <div className="flex flex-[2_1_280px] flex-col gap-5">
-            <Logo />
+            <Logo href={brand === "labs" ? "/labs" : "/"} tag={brand === "labs" ? "Labs" : "Studio"} />
             <p className="max-w-[32ch] text-sm leading-[1.6] text-fg-muted">
-              Websites, booking systems and automation for small and growing
-              businesses in India and the US.
+              {blurb[brand]}
             </p>
           </div>
 
           <div className="flex flex-[1_1_140px] flex-col gap-3.5">
             <Eyebrow className="mb-1.5">Pages</Eyebrow>
-            {pages.map((p) => (
+            {pages[brand].map((p) => (
               <Link key={p.label} href={p.href} className={linkCls}>
                 {p.label}
               </Link>

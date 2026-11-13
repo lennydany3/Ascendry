@@ -1,0 +1,179 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Ascendry home" [ref=e7] [cursor=pointer]:
+        - /url: /labs
+        - generic [ref=e13]: ASCENDRY
+        - generic [ref=e14]: Labs
+      - navigation "Primary" [ref=e15]:
+        - link "Lab" [ref=e16] [cursor=pointer]:
+          - /url: "#lab"
+        - link "Approach" [ref=e17] [cursor=pointer]:
+          - /url: "#approach"
+        - link "Principles" [ref=e18] [cursor=pointer]:
+          - /url: "#principles"
+      - generic [ref=e19]:
+        - group "Switch between Ascendry Studio and Labs" [ref=e20]:
+          - link "Studio" [ref=e21] [cursor=pointer]:
+            - /url: /
+          - link "Labs" [ref=e22] [cursor=pointer]:
+            - /url: /labs
+        - link "Get in touch" [ref=e23] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e26]:
+    - region "Introduction" [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - paragraph [ref=e31]: Ascendry Labs · Our own products
+          - heading "Ideas that become products." [level=1] [ref=e35]:
+            - generic [ref=e36]: Ideas
+            - generic [ref=e38]: that
+            - generic [ref=e40]: become
+            - generic [ref=e42]: products.
+          - paragraph [ref=e44]: Ascendry Labs is where our own startup ideas get built and launched — designed, shipped and improved in the open, one product at a time.
+          - generic [ref=e45]:
+            - link "See the lab" [ref=e46] [cursor=pointer]:
+              - /url: "#lab"
+              - text: See the lab
+              - generic [aria-hidden] [ref=e47]: →
+            - link "Get in touch" [ref=e48] [cursor=pointer]:
+              - /url: "#contact"
+          - paragraph [ref=e49]:
+            - text: Looking for client work?
+            - link "Visit Ascendry Studio →" [ref=e50] [cursor=pointer]:
+              - /url: /
+        - generic [aria-hidden] [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: Fig. 02
+            - generic [ref=e54]: Idea → Launch
+          - img [ref=e56]:
+            - generic [ref=e59]:
+              - generic [ref=e62]: "01"
+              - generic [ref=e63]: Idea
+            - generic [ref=e65]:
+              - generic [ref=e68]: "02"
+              - generic [ref=e69]: Prototype
+            - generic [ref=e71]:
+              - generic [ref=e74]: "03"
+              - generic [ref=e75]: Launch
+    - generic [ref=e77]:
+      - generic [ref=e79]:
+        - paragraph [ref=e80]: — 01 / The lab
+        - heading [level=2] [ref=e81]:
+          - text: What we're
+          - emphasis [ref=e82]: building
+          - text: .
+        - paragraph [ref=e83]: Products are announced when they launch. Until then, this is what moves through the lab.
+      - generic [ref=e84]:
+        - article [ref=e86]:
+          - generic [ref=e87]: Researching
+          - heading "Next idea" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Problems worth solving, validated with real people before a line of code is written.
+        - article [ref=e92]:
+          - generic [ref=e93]: Building
+          - heading "In progress" [level=3] [ref=e95]
+          - paragraph [ref=e96]: Small, focused prototypes shipped fast so we learn from real use, not guesses.
+        - article [ref=e98]:
+          - generic [ref=e99]: Launching
+          - heading "First launch" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Our first product is on the way. Products are announced here the moment they go live.
+    - generic [ref=e104]:
+      - generic [ref=e106]:
+        - paragraph [ref=e107]: — 02 / Approach
+        - heading [level=2] [ref=e108]:
+          - text: From idea to
+          - emphasis [ref=e109]: launch
+          - text: .
+        - paragraph [ref=e110]: A simple loop we repeat for every product.
+      - list [ref=e111]:
+        - listitem [ref=e112]:
+          - text: "01"
+          - heading "Spot the problem" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Start from something people genuinely struggle with.
+        - listitem [ref=e115]:
+          - text: "02"
+          - heading "Prototype fast" [level=3] [ref=e116]
+          - paragraph [ref=e117]: A working version in weeks, not months.
+        - listitem [ref=e118]:
+          - text: "03"
+          - heading "Launch early" [level=3] [ref=e119]
+          - paragraph [ref=e120]: Put it in front of real users and listen.
+        - listitem [ref=e121]:
+          - text: "04"
+          - heading "Improve or retire" [level=3] [ref=e122]
+          - paragraph [ref=e123]: Double down on what works. Stop what doesn't.
+    - generic [ref=e125]:
+      - generic [ref=e127]:
+        - paragraph [ref=e128]: — 03 / Principles
+        - heading [level=2] [ref=e129]:
+          - text: How the lab
+          - emphasis [ref=e130]: works
+          - text: .
+      - generic [ref=e131]:
+        - generic [ref=e133]:
+          - heading "Built in the open" [level=3] [ref=e134]
+          - paragraph [ref=e135]: We share what we ship and what we learn.
+        - generic [ref=e137]:
+          - heading "Small and sharp" [level=3] [ref=e138]
+          - paragraph [ref=e139]: One problem, done well, beats ten features done halfway.
+        - generic [ref=e141]:
+          - heading "Studio-grade craft" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Products get the same design and engineering standards as client work.
+    - generic [ref=e146]:
+      - generic [ref=e147]:
+        - paragraph [ref=e148]: — 04 / Contact
+        - heading [level=2] [ref=e149]:
+          - text: Got an idea worth
+          - emphasis [ref=e150]: launching
+          - text: "?"
+        - paragraph [ref=e151]: Collaborations, feedback or early-access interest — we'd love to hear from you.
+      - generic [ref=e152]:
+        - link "Email the lab" [ref=e153] [cursor=pointer]:
+          - /url: mailto:hello@ascendry.in
+        - link "Chat on WhatsApp" [ref=e154] [cursor=pointer]:
+          - /url: https://wa.me/91XXXXXXXXXX
+  - contentinfo [ref=e155]:
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - generic [ref=e158]:
+          - link "Ascendry home" [ref=e159] [cursor=pointer]:
+            - /url: /labs
+            - generic [ref=e165]: ASCENDRY
+            - generic [ref=e166]: Labs
+          - paragraph [ref=e167]: Our own startup ideas, built and launched in the open by Ascendry.
+        - generic [ref=e168]:
+          - paragraph [ref=e169]: Pages
+          - link "Lab" [ref=e170] [cursor=pointer]:
+            - /url: "#lab"
+          - link "Approach" [ref=e171] [cursor=pointer]:
+            - /url: "#approach"
+          - link "Principles" [ref=e172] [cursor=pointer]:
+            - /url: "#principles"
+          - link "Contact" [ref=e173] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Ascendry Studio" [ref=e174] [cursor=pointer]:
+            - /url: /
+        - generic [ref=e175]:
+          - paragraph [ref=e176]: Legal
+          - link "Privacy policy" [ref=e177] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms & conditions" [ref=e178] [cursor=pointer]:
+            - /url: "#"
+          - link "Refund & cancellation" [ref=e179] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e180]:
+          - paragraph [ref=e181]: Contact
+          - link "hello@ascendry.in" [ref=e182] [cursor=pointer]:
+            - /url: mailto:hello@ascendry.in
+          - link "WhatsApp +91 XXXXXXXXXX" [ref=e183] [cursor=pointer]:
+            - /url: https://wa.me/91XXXXXXXXXX
+          - generic [ref=e184]: 3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil Nadu, India
+      - generic [ref=e185]:
+        - generic [ref=e186]: © 2026 Ascendry · Chennai, India
+        - generic [ref=e187]: Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
+    - generic [aria-hidden] [ref=e188]: ASCENDRY
+  - link "Chat on WhatsApp" [ref=e189] [cursor=pointer]:
+    - /url: https://wa.me/91XXXXXXXXXX
+  - button "Open Next.js Dev Tools" [ref=e197] [cursor=pointer]
