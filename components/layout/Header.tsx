@@ -34,7 +34,7 @@ function BrandSwitch({ brand, className = "" }: { brand: Brand; className?: stri
     <div
       role="group"
       aria-label="Switch between Ascendry Studio and Labs"
-      className={`items-center rounded-lg border border-line bg-white/[0.03] p-0.5 ${className}`}
+      className={`items-center rounded-lg border border-white/15 bg-white/[0.05] p-0.5 ${className}`}
     >
       {(["studio", "labs"] as const).map((b) => (
         <Link
@@ -49,8 +49,8 @@ function BrandSwitch({ brand, className = "" }: { brand: Brand; className?: stri
           aria-current={b === brand ? "page" : undefined}
           className={`rounded-md px-3 py-1.5 font-mono text-[11px] leading-none tracking-[0.12em] uppercase transition-colors duration-200 ${
             b === brand
-              ? "bg-white/[0.1] text-fg"
-              : "text-fg-subtle hover:text-fg"
+              ? "bg-white/[0.16] text-fg"
+              : "text-[#a8a8a8] hover:text-fg"
           }`}
         >
           {config[b].tag}
@@ -157,8 +157,8 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
           <div
             className={`grid h-14 grid-cols-[1fr_auto] items-center rounded-xl border pr-1.5 pl-4 transition-[background-color,border-color,box-shadow] duration-300 ease-out md:grid-cols-[1fr_auto_1fr] md:pl-5 ${
               scrolled
-                ? "border-line-strong bg-bg/70 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.8)] backdrop-blur-xl backdrop-saturate-150"
-                : "border-transparent bg-transparent"
+                ? "border-white/20 bg-[#0a0a0a]/95 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.9)] backdrop-blur-xl"
+                : "border-white/10 bg-[#0a0a0a]/40 backdrop-blur-md"
             }`}
           >
             <div className="justify-self-start">
@@ -167,7 +167,7 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
 
             <nav
               aria-label="Primary"
-              className="hidden items-center gap-1 rounded-full border border-line bg-white/[0.03] p-1 md:flex"
+              className="hidden items-center gap-1 rounded-full border border-white/15 bg-white/[0.05] p-1 md:flex"
             >
               {links.map((l) => {
                 const on = active === l.href.slice(1);
@@ -178,8 +178,8 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
                     aria-current={on ? "location" : undefined}
                     className={`rounded-full px-4 py-1.5 text-sm transition-[color,background-color] duration-200 ${
                       on
-                        ? "bg-white/[0.09] text-fg"
-                        : "text-fg-muted hover:bg-white/[0.05] hover:text-fg"
+                        ? "bg-white/[0.16] text-fg"
+                        : "text-[#d4d4d4] hover:bg-white/[0.08] hover:text-fg"
                     }`}
                   >
                     {l.label}

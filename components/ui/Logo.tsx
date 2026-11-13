@@ -37,7 +37,7 @@ export function Logo({
         ASCENDRY
       </span>
       {tag ? (
-        <span className="ml-0.5 rounded-[4px] border border-line-strong px-1.5 py-[3px] font-mono text-[10px] leading-none tracking-[0.14em] text-fg-muted uppercase">
+        <span className="ml-0.5 rounded-[4px] border border-white/25 px-1.5 py-[3px] font-mono text-[10px] leading-none tracking-[0.14em] text-[#d4d4d4] uppercase">
           {tag}
         </span>
       ) : null}
