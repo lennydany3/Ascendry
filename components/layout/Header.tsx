@@ -40,6 +40,12 @@ function BrandSwitch({ brand, className = "" }: { brand: Brand; className?: stri
         <Link
           key={b}
           href={config[b].home}
+          scroll={false}
+          onClick={() => {
+            try {
+              sessionStorage.setItem("brand-switch", "1");
+            } catch {}
+          }}
           aria-current={b === brand ? "page" : undefined}
           className={`rounded-md px-3 py-1.5 font-mono text-[11px] leading-none tracking-[0.12em] uppercase transition-colors duration-200 ${
             b === brand
@@ -91,6 +97,17 @@ export function Header({ brand = "studio" }: { brand?: Brand }) {
       },
       reduced ? 0 : 320,
     );
+  }, []);
+
+  // After switching Studio <-> Labs always land at the top of the new page
+  // (Next's default scroll handling can land on the footer).
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem("brand-switch")) {
+        sessionStorage.removeItem("brand-switch");
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      }
+    } catch {}
   }, []);
 
   useEffect(() => {
