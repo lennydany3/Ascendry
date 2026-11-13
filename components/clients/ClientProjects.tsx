@@ -76,10 +76,10 @@ export function ClientProjects() {
         onClick={(e) => {
           if (e.target === e.currentTarget) e.currentTarget.close();
         }}
-        className="m-auto max-h-[calc(100dvh-24px)] w-[min(1180px,calc(100vw-24px))] overflow-y-auto rounded-2xl border border-line-strong bg-bg p-0 text-fg backdrop:bg-black/75 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[calc(100dvh-16px)] w-[min(1180px,calc(100vw-16px))] overflow-y-auto rounded-2xl border border-line-strong bg-bg p-0 text-fg backdrop:bg-black/75 backdrop:backdrop-blur-sm"
       >
         {c ? (
-          <div className="relative p-5 pt-16 sm:p-8 sm:pt-16 lg:p-10 lg:pt-14">
+          <div className="relative p-4 pt-16 sm:p-8 sm:pt-16 lg:p-10 lg:pt-14">
             <button
               type="button"
               onClick={() => dialog.current?.close()}

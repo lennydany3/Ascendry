@@ -12,13 +12,13 @@ export function Showcase({ shots, url, name }: { shots: Shot[]; url: string; nam
   return (
     <div>
       <div className="overflow-hidden rounded-xl border border-line-strong bg-[#0c0c0c] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.9)]">
-        <div className="relative flex h-10 items-center border-b border-line px-4">
+        <div className="relative flex h-8 items-center sm:h-10 border-b border-line px-4">
           <div className="flex gap-1.5" aria-hidden="true">
             <span className="size-2.5 rounded-full bg-white/15" />
             <span className="size-2.5 rounded-full bg-white/15" />
             <span className="size-2.5 rounded-full bg-white/15" />
           </div>
-          <span className="absolute left-1/2 max-w-[60%] -translate-x-1/2 truncate rounded-md bg-white/[0.05] px-3 py-1 font-mono text-[11px] text-fg-subtle">
+          <span className="absolute left-1/2 max-w-[65%] -translate-x-1/2 truncate rounded-md bg-white/[0.05] px-2.5 py-0.5 font-mono text-[10px] sm:px-3 sm:py-1 sm:text-[11px] text-fg-subtle">
             {host}
           </span>
         </div>
@@ -40,7 +40,11 @@ export function Showcase({ shots, url, name }: { shots: Shot[]; url: string; nam
         </div>
       </div>
 
-      <div role="tablist" aria-label={`${name} screens`} className="mt-4 grid grid-cols-4 gap-2 sm:gap-3">
+      <p className="mt-3 font-mono text-[11px] tracking-[0.14em] text-fg-subtle uppercase sm:hidden" aria-live="polite">
+        {shots[i].label}
+      </p>
+
+      <div role="tablist" aria-label={`${name} screens`} className="mt-3 grid grid-cols-4 gap-2 sm:mt-4 sm:gap-3">
         {shots.map((s, n) => (
           <button
             key={s.src}
@@ -49,7 +53,7 @@ export function Showcase({ shots, url, name }: { shots: Shot[]; url: string; nam
             aria-selected={n === i}
             aria-label={`Show ${s.label} screen`}
             onClick={() => setI(n)}
-            className={`group cursor-pointer text-left transition-opacity ${n === i ? "opacity-100" : "opacity-55 hover:opacity-100"}`}
+            className={`group min-w-0 cursor-pointer text-left transition-opacity ${n === i ? "opacity-100" : "opacity-55 hover:opacity-100"}`}
           >
             <span
               className={`relative block aspect-[16/10] overflow-hidden rounded-md border bg-[#0c0c0c] transition-colors ${
@@ -65,7 +69,7 @@ export function Showcase({ shots, url, name }: { shots: Shot[]; url: string; nam
                 className="size-full object-cover object-top"
               />
             </span>
-            <span className="mt-2 block font-mono text-[11px] tracking-[0.14em] text-fg-subtle uppercase">
+            <span className="mt-2 hidden truncate font-mono text-[11px] tracking-[0.14em] text-fg-subtle uppercase sm:block">
               {s.label}
             </span>
           </button>
