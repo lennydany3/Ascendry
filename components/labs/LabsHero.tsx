@@ -10,10 +10,10 @@ const words = [
   { w: "products.", italic: true },
 ];
 
-const stages = [
-  { name: "Idea", note: "Sketched & tested" },
-  { name: "Prototype", note: "Built in-house" },
-  { name: "Launch", note: "Shipped & improved" },
+const facts = [
+  ["Built", "In-house"],
+  ["Shipped", "In the open"],
+  ["Based in", "Chennai, IN"],
 ];
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
@@ -92,36 +92,19 @@ export function LabsHero() {
             </Button>
           </div>
 
-          {/* Three stages, matching the wireframe / glass / chrome pieces on the right */}
-          <ol
-            className="anim-rev mt-12 grid max-w-[520px] grid-cols-3 gap-0 border-t border-line pt-6 sm:mt-14"
+          <dl
+            className="anim-rev mt-12 grid max-w-[520px] grid-cols-3 gap-6 border-t border-line pt-6 sm:mt-14"
             style={d(1300)}
-            aria-label="How a Labs product is made"
           >
-            {stages.map((st, i) => (
-              <li key={st.name} className="relative pr-4">
-                <span className="flex items-center gap-2.5">
-                  <span
-                    aria-hidden="true"
-                    className={`size-2 rounded-full border ${
-                      i === 2 ? "border-fg bg-fg" : i === 1 ? "border-fg-muted bg-fg-muted/40" : "border-fg-subtle"
-                    }`}
-                  />
-                  <span
-                    aria-hidden="true"
-                    className={`h-px flex-1 ${i === 2 ? "bg-transparent" : "bg-line-strong"}`}
-                  />
-                </span>
-                <span className="mt-3 block font-mono text-[10px] tracking-[0.18em] text-fg-subtle uppercase">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="mt-1 block text-[15px] text-fg">{st.name}</span>
-                <span className="mt-0.5 block text-[13px] leading-[1.5] text-fg-subtle">
-                  {st.note}
-                </span>
-              </li>
+            {facts.map(([k, v]) => (
+              <div key={k}>
+                <dt className="font-mono text-[10px] tracking-[0.18em] text-fg-subtle uppercase">
+                  {k}
+                </dt>
+                <dd className="mt-2 text-[15px] text-fg">{v}</dd>
+              </div>
             ))}
-          </ol>
+          </dl>
 
           <p
             className="anim-rev mt-8 text-sm leading-[1.6] text-fg-subtle"
