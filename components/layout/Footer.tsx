@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { ArrowUpIcon, ChatIcon, MailIcon, PinIcon } from "@/components/ui/Icons";
 import { Logo } from "@/components/ui/Logo";
+import { MarkOutline } from "@/components/ui/MarkOutline";
 
 async function getYear() {
   "use cache";
@@ -38,11 +40,25 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
   const year = await getYear();
 
   return (
-    <footer className="overflow-hidden border-t border-line">
-      <Container className="pt-24">
+    <footer className="relative overflow-hidden border-t border-line">
+      {/* Decorative: top glow, blueprint mark, hairline */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-1/2 h-[260px] w-[720px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),transparent_70%)]"
+      />
+      <MarkOutline className="pointer-events-none absolute -top-10 -right-[12%] hidden h-[440px] text-white/[0.06] lg:block" />
+
+      <Container className="relative pt-20 md:pt-24">
         <div className="flex flex-wrap gap-x-8 gap-y-12">
           <div className="flex flex-[2_1_280px] flex-col gap-5">
-            <Logo href={brand === "labs" ? "/labs" : "/"} tag={brand === "labs" ? "Labs" : "Studio"} />
+            <Logo
+              href={brand === "labs" ? "/labs" : "/"}
+              tag={brand === "labs" ? "Labs" : "Studio"}
+            />
             <p className="max-w-[32ch] text-sm leading-[1.6] text-fg-muted">
               {blurb[brand]}
             </p>
@@ -66,32 +82,45 @@ export async function Footer({ brand = "studio" }: { brand?: "studio" | "labs" }
             ))}
           </div>
 
-          <div className="flex flex-[1_1_220px] flex-col gap-3.5">
+          <div className="flex flex-[1_1_240px] flex-col gap-3.5">
             <Eyebrow className="mb-1.5">Contact</Eyebrow>
-            <a href="mailto:hello@ascendry.in" className={linkCls}>
+            <a href="mailto:hello@ascendry.in" className={`${linkCls} flex items-center gap-2.5`}>
+              <MailIcon width={16} height={16} className="shrink-0 text-fg-subtle" />
               hello@ascendry.in
             </a>
-            <a href="https://wa.me/91XXXXXXXXXX" className={linkCls}>
+            <a href="https://wa.me/91XXXXXXXXXX" className={`${linkCls} flex items-center gap-2.5`}>
+              <ChatIcon width={16} height={16} className="shrink-0 text-fg-subtle" />
               WhatsApp +91 XXXXXXXXXX
             </a>
-            <span className="max-w-[28ch] text-sm leading-[1.6] text-fg-subtle">
+            <span className="flex max-w-[30ch] items-start gap-2.5 text-sm leading-[1.6] text-fg-subtle">
+              <PinIcon width={16} height={16} className="mt-[3px] shrink-0" />
               3rd Block 1st Street, Kannadasan Nagar, Chennai 600118, Tamil
               Nadu, India
             </span>
           </div>
         </div>
 
-        <div className="mt-24 flex flex-wrap justify-between gap-x-6 gap-y-2 border-t border-line py-6 text-[13px] leading-[1.6] text-fg-subtle">
+        <div className="mt-20 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-line py-6 text-[13px] leading-[1.6] text-fg-subtle md:mt-24">
           <span>© {year} Ascendry · Chennai, India</span>
-          <span>
+          <span className="order-last w-full md:order-none md:w-auto">
             Registered under Udyam (MSME), Govt. of India · UDYAM-TN-02-0445785
           </span>
+          <Link
+            href="#main"
+            className="group inline-flex items-center gap-2 text-fg-muted transition-colors hover:text-fg"
+          >
+            Back to top
+            <span className="flex size-8 items-center justify-center rounded-full border border-line-strong transition-colors group-hover:bg-white/[0.06]">
+              <ArrowUpIcon width={14} height={14} />
+            </span>
+          </Link>
         </div>
       </Container>
 
+      {/* Wordmark, fading into the page */}
       <div
         aria-hidden="true"
-        className="mt-4 h-[0.64em] overflow-hidden pl-[0.2em] text-center text-[12.5vw] leading-none font-medium tracking-[0.2em] text-[#141414] select-none"
+        className="mt-2 h-[0.7em] overflow-hidden bg-gradient-to-b from-white/[0.12] to-transparent bg-clip-text pl-[0.2em] text-center text-[12.5vw] leading-none font-medium tracking-[0.2em] text-transparent select-none"
       >
         ASCENDRY
       </div>
