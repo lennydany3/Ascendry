@@ -33,10 +33,10 @@ export const CLIENTS: Client[] = [
     href: "https://heatwave-chn.vercel.app/",
     brand: "#E63946",
     shots: [
-      { src: "/images/heatwave/landing.png", label: "Event page", alt: "Heatwave event landing page for the Caseano cruise party", width: 1685, height: 855 },
-      { src: "/images/heatwave/registation.png", label: "Registration", alt: "Heatwave registration and ticket selection", width: 1328, height: 1013 },
-      { src: "/images/heatwave/my_ticket.png", label: "My tickets", alt: "Heatwave attendee ticket dashboard", width: 1556, height: 994 },
-      { src: "/images/heatwave/ticket_preview.png", label: "QR pass", alt: "Heatwave signed QR ticket with payment details", width: 1429, height: 995 },
+      { src: "/images/studio/heatwave/landing.png", label: "Event page", alt: "Heatwave event landing page for the Caseano cruise party", width: 1685, height: 855 },
+      { src: "/images/studio/heatwave/registation.png", label: "Registration", alt: "Heatwave registration and ticket selection", width: 1328, height: 1013 },
+      { src: "/images/studio/heatwave/my_ticket.png", label: "My tickets", alt: "Heatwave attendee ticket dashboard", width: 1556, height: 994 },
+      { src: "/images/studio/heatwave/ticket_preview.png", label: "QR pass", alt: "Heatwave signed QR ticket with payment details", width: 1429, height: 995 },
     ],
   },
   {
@@ -55,10 +55,10 @@ export const CLIENTS: Client[] = [
     href: "https://nic-srm.vercel.app/",
     brand: "#DC143C",
     shots: [
-      { src: "/images/NIC/landing.png", label: "Landing", alt: "NIC club website landing page", width: 1548, height: 1011 },
-      { src: "/images/NIC/about.png", label: "About", alt: "NIC about page", width: 1426, height: 1013 },
-      { src: "/images/NIC/genesis-event.png", label: "Genesis’26", alt: "Genesis 26 event page", width: 1475, height: 996 },
-      { src: "/images/NIC/registation-closed.png", label: "Registration", alt: "NIC event registration state", width: 1467, height: 932 },
+      { src: "/images/studio/NIC/landing.png", label: "Landing", alt: "NIC club website landing page", width: 1548, height: 1011 },
+      { src: "/images/studio/NIC/about.png", label: "About", alt: "NIC about page", width: 1426, height: 1013 },
+      { src: "/images/studio/NIC/genesis-event.png", label: "Genesis’26", alt: "Genesis 26 event page", width: 1475, height: 996 },
+      { src: "/images/studio/NIC/registation-closed.png", label: "Registration", alt: "NIC event registration state", width: 1467, height: 932 },
     ],
   },
   {
@@ -77,10 +77,10 @@ export const CLIENTS: Client[] = [
     href: "https://vdpclubsphere.vercel.app/",
     brand: "#6C63FF",
     shots: [
-      { src: "/images/clubsphere/landing.png", label: "Landing", alt: "ClubSphere landing page", width: 1466, height: 1011 },
-      { src: "/images/clubsphere/events.png", label: "Events", alt: "ClubSphere campus events listing", width: 1557, height: 1011 },
-      { src: "/images/clubsphere/clubs.png", label: "Clubs", alt: "ClubSphere clubs directory", width: 1462, height: 1013 },
-      { src: "/images/clubsphere/about.png", label: "About", alt: "ClubSphere about page", width: 1545, height: 1010 },
+      { src: "/images/studio/clubsphere/landing.png", label: "Landing", alt: "ClubSphere landing page", width: 1466, height: 1011 },
+      { src: "/images/studio/clubsphere/events.png", label: "Events", alt: "ClubSphere campus events listing", width: 1557, height: 1011 },
+      { src: "/images/studio/clubsphere/clubs.png", label: "Clubs", alt: "ClubSphere clubs directory", width: 1462, height: 1013 },
+      { src: "/images/studio/clubsphere/about.png", label: "About", alt: "ClubSphere about page", width: 1545, height: 1010 },
     ],
   },
 ];
