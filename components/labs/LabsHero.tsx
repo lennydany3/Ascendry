@@ -12,73 +12,21 @@ const words = [
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as CSSProperties;
 
-const stages = [
-  { n: "01", label: "Idea", x: 40, y: 250 },
-  { n: "02", label: "Prototype", x: 170, y: 170 },
-  { n: "03", label: "Launch", x: 300, y: 70 },
-];
-
-/** Idea → Prototype → Launch trajectory. Pure SVG + CSS, no JS. */
+/** Exploded-view illustration: wireframe -> glass -> chrome (public/labs-hero.svg). */
 function LaunchPanel() {
   return (
     <div
-      aria-hidden="true"
-      className="anim-fade relative aspect-[5/4] w-full overflow-hidden rounded-2xl border border-line bg-[radial-gradient(ellipse_70%_60%_at_60%_35%,rgba(150,170,255,0.09),transparent_70%)] sm:aspect-[16/11] lg:aspect-auto lg:h-[clamp(480px,68vh,640px)]"
+      className="anim-fade w-full justify-self-center lg:justify-self-end"
       style={d(500)}
     >
-      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-4 py-3 font-mono text-[10px] tracking-[0.16em] text-fg-subtle uppercase">
-        <span>Fig. 02</span>
-        <span>Idea → Launch</span>
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[length:40px_40px] [mask-image:radial-gradient(ellipse_80%_70%_at_50%_55%,#000_20%,transparent_80%)]" />
-      <svg
-        viewBox="0 0 340 320"
-        className="absolute inset-0 m-auto h-[82%] w-[88%] overflow-visible"
-        preserveAspectRatio="xMidYMid meet"
-      >
-        <defs>
-          <linearGradient id="labs-line" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0" stopColor="#ffffff" stopOpacity="0.1" />
-            <stop offset="1" stopColor="#ffffff" stopOpacity="0.95" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M40 250 C 100 250, 120 175, 170 170 S 250 80, 300 70"
-          fill="none"
-          stroke="url(#labs-line)"
-          strokeWidth="1.5"
-          strokeDasharray="1"
-          pathLength="1"
-          className="labs-draw"
-        />
-        {stages.map((s, i) => (
-          <g key={s.n} transform={`translate(${s.x} ${s.y})`}>
-            <g className="anim-fade" style={d(1100 + i * 350)}>
-              <circle r="14" fill="rgba(255,255,255,0.05)" />
-              <circle
-                r="5"
-                fill={i === 2 ? "#fafafa" : "#0a0a0a"}
-                stroke="#fafafa"
-                strokeWidth="1.5"
-              />
-              <text
-                y="-26"
-                textAnchor="middle"
-                className="fill-[#7c7c7c] font-mono text-[9px] tracking-[0.16em]"
-              >
-                {s.n}
-              </text>
-              <text
-                y="34"
-                textAnchor="middle"
-                className="fill-[#fafafa] font-mono text-[10px] tracking-[0.14em] uppercase"
-              >
-                {s.label}
-              </text>
-            </g>
-          </g>
-        ))}
-      </svg>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/labs-hero.svg"
+        alt="The Ascendry A shown as an exploded assembly: a wireframe crossbar (idea), a glass left leg (prototype) and a finished chrome right leg (launch)."
+        width={560}
+        height={640}
+        className="mx-auto block h-auto w-full max-w-[560px] lg:mr-0"
+      />
     </div>
   );
 }
